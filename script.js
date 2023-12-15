@@ -1,7 +1,12 @@
-// Get the monkey image element
-var monkeyImg = document.getElementById("monkey");
-
-// Add an event listener to the monkey image
-monkeyImg.addEventListener("click", function() {
-
-});
+function print(){
+    var htmlCode = '';
+    const phrase = 'Work in progress';
+    for (var i = 0; i < phrase.length; i++) {
+		if (phrase[i] == ' '){
+			htmlCode += ' ';
+		} else {
+			htmlCode += '<span class="letter">' + phrase[i] + '</span>';
+		}
+    }
+    document.getElementById('loading-text').innerHTML = htmlCode;
+}
