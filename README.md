@@ -2,5 +2,5 @@
 
 My professional CV in PDF format.
 
-**Last updated:** October 30, 2025  
+**Last updated:** November 25, 2025  
 **Live preview:** [View CV online](https://jarturog.github.io)
