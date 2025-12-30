@@ -50,6 +50,7 @@
       display: flex;
       gap: 10px;
       flex-wrap: wrap;
+      align-items: center;
     }
     .top-nav a {
       color: white;
@@ -65,6 +66,67 @@
     .top-nav a:hover {
       background: rgba(255, 255, 255, 0.25);
     }
+    
+    /* Dropdown styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-button {
+      color: white;
+      text-decoration: none;
+      padding: 8px 16px;
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 4px;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 14px;
+      transition: background 0.3s;
+      white-space: nowrap;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .dropdown-button:hover {
+      background: rgba(255, 255, 255, 0.25);
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: calc(100% - 2px);
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: white;
+      min-width: 250px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      border-radius: 4px;
+      overflow: hidden;
+      padding-top: 5px;
+    }
+    .dropdown-content a {
+      color: #333;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      background: white;
+      border-radius: 0;
+      transition: background 0.2s;
+    }
+    .dropdown-content a:hover {
+      background: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-arrow {
+      font-size: 10px;
+      transition: transform 0.3s;
+    }
+    .dropdown:hover .dropdown-arrow {
+      transform: rotate(180deg);
+    }
+    
     .pdf-container {
       margin-top: 50px;
       height: calc(100% - 50px);
@@ -82,8 +144,23 @@
       <span class="last-modified" id="lastModified">Loading...</span>
     </h1>
     <div class="nav-links">
-      <a href="assets/snn-survey.pdf" target="_blank">📄 SNN Paper</a>
-      <a href="assets/bachelor-thesis.pdf" target="_blank">🎓 Bachelor Thesis</a>
+      <div class="dropdown">
+        <div class="dropdown-button">
+          Papers
+          <span class="dropdown-arrow">▼</span>
+        </div>
+        <div class="dropdown-content">
+          <a href="assets/backdoor-review.pdf" target="_blank">
+            Backdoor Detection & Mitigation in Neural Networks
+          </a>
+          <a href="assets/snn-survey.pdf" target="_blank">
+            Spiking Neural Networks: A Comprehensive Survey
+          </a>
+          <a href="assets/bachelor-thesis.pdf" target="_blank">
+            Bachelor Thesis
+          </a>
+        </div>
+      </div>
       <a href="https://github.com/Jarturog" target="_blank">💻 GitHub</a>
       <a href="https://linkedin.com/in/j-arturo-a-c" target="_blank">🔗 LinkedIn</a>
     </div>
