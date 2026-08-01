@@ -1139,6 +1139,22 @@
       if(names.length) return names;
     }
 
+    // 4) GitHub API listing: works on GitHub Pages (public repo) without needing
+    //    to maintain index.json/index.txt manually. Adjust OWNER/REPO if needed.
+    try{
+      const GH_OWNER = 'Jarturog';
+      const GH_REPO  = 'Jarturog.github.io';
+      const apiUrl = `https://api.github.com/repos/${GH_OWNER}/${GH_REPO}/contents/events`;
+      const r = await fetch(apiUrl, {cache:'no-store'});
+      if(r.ok){
+        const data = await r.json();
+        const names = Array.isArray(data)
+          ? data.filter(f=> f.type === 'file' && /\.ics$/i.test(f.name)).map(f=> f.name)
+          : [];
+        if(names.length) return names;
+      }
+    }catch(e){ /* ignore, fall through */ }
+
     return [];
   }
 
