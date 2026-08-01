@@ -69,39 +69,47 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cvpr2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270620
-DTEND;VALUE=DATE:20270625
+DTEND;VALUE=DATE:20270624
 SUMMARY:CVPR 2027
 LOCATION:Seattle, EEUU
-DESCRIPTION:Fecha y ciudad confirmadas por CVF. Venue exacto aun no publica
- do.
+DESCRIPTION:Fecha y ciudad confirmadas por CVF (thecvf.com): 20-24 jun 202
+ 7 (corregido de 20-25). Venue exacto aun no publicado.
 CATEGORIES:AI,CV,Conference
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:cvpr2027_deadline@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20261115
 DTEND;VALUE=DATE:20261116
 SUMMARY:Deadline CVPR 2027 (abstract)
 LOCATION:Online
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Deadline estimado de abst
- ract (fuente no oficial, confirmar en thecvf.com).
+DESCRIPTION:VERIFICADO 01-ago-2026: el CFP oficial de CVPR 2027 (cvpr.thec
+ vf.com/Conferences/2027) aun no esta publicado. Trackers especializados c
+ onvergen en un rango de abstract deadline 6-15 nov 2026 y paper deadline 
+ ~13 nov 2026\, en linea con la estimacion previa. Sede de CVPR 2027: Seat
+ tle\, WA (20-24 jun 2027\, confirmado por CVF/thecvf.com) aunque el venue
+  exacto sigue sin publicarse.
 CATEGORIES:AI,CV,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:icml2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270712
 DTEND;VALUE=DATE:20270719
 SUMMARY:ICML 2027 (TENTATIVO)
 LOCATION:Sede por confirmar
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (julio 202
- 7); la sede y fechas exactas aun no estan confirmadas oficialmente.
+DESCRIPTION:VERIFICADO 01-ago-2026: fecha y sede de ICML 2027 (Internation
+ al Conference on Machine Learning) SIGUEN sin confirmar oficialmente (icm
+ l.cc). Solo se sabe que sera en julio 2027. Nota: existe otra conferencia
+  distinta con las mismas siglas (International Conference on Minority Lan
+ guages\, ICML 2027) del 22-26 jun 2027 en Bolzano\, Italia - no confundir
+ .
 CATEGORIES:AI,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -168,38 +176,43 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:iclr2027_deadline_abs@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20260919
-DTEND;VALUE=DATE:20260920
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20260919
 SUMMARY:Deadline ICLR 2027 (abstract registration)
 LOCATION:Online
-DESCRIPTION:Confirmado en call for papers oficial.
+DESCRIPTION:CORREGIDO 01-ago-2026 tras verificar iclr.cc/Conferences/2027/
+ Dates: Sep 18\, 2026 AoE (la fecha previa\, 19 sep\, era incorrecta).
 CATEGORIES:AI,Deadline
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:iclr2027_deadline_paper@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20260924
-DTEND;VALUE=DATE:20260925
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20260926
 SUMMARY:Deadline ICLR 2027 (paper submission)
 LOCATION:Online
-DESCRIPTION:Confirmado en call for papers oficial.
+DESCRIPTION:CORREGIDO 01-ago-2026 tras verificar iclr.cc/Conferences/2027/
+ Dates: Sep 25\, 2026 AoE (la fecha previa\, 24 sep\, era incorrecta).
 CATEGORIES:AI,Deadline
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:iclr2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270426
-DTEND;VALUE=DATE:20270501
-SUMMARY:ICLR 2027 (TENTATIVO)
-LOCATION:Brasil (ciudad TBD)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Sede confirmada (Brasil) 
- pero fechas exactas del congreso aun no anunciadas; estimacion basada en p
- atron de anios previos (abril-mayo).
+DTEND;VALUE=DATE:20270430
+SUMMARY:ICLR 2027 (TENTATIVO - fechas oficiales\, sede TBD)
+LOCATION:Sede sin confirmar oficialmente (varios trackers apuntan a Brasil
+ \, sin confirmar en iclr.cc)
+DESCRIPTION:ACTUALIZADO 01-ago-2026: fechas oficiales en iclr.cc/Conferenc
+ es/2027/Dates -> Main Conference 26-28 abr\, Workshops 28-30 abr 2027. El
+  sitio oficial aun dice "location and dates to be announced" para la sede
+ \, pese a que trackers de terceros mencionan Brasil (no confirmado oficia
+ lmente). Confirmar sede antes de reservar viaje.
 CATEGORIES:AI,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -218,13 +231,16 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ijcai2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20270816
-DTEND;VALUE=DATE:20270823
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20270814
+DTEND;VALUE=DATE:20270821
 SUMMARY:IJCAI 2027 (TENTATIVO)
 LOCATION:Sede por confirmar
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (agosto, p
- atron habitual); sin confirmar oficialmente.
+DESCRIPTION:ACTUALIZADO 01-ago-2026: IJCAI oficial (ijcai.org) confirma qu
+ e sede y fechas de IJCAI-2027 se anunciaran durante IJCAI-ECAI-26 (Bremen
+ \, 15-21 ago 2026). Varios trackers estiman Aug 14-20\, 2027 (TBA) en bas
+ e al patron historico; sin confirmar oficialmente. Fecha ajustada respect
+ o a la estimacion previa.
 CATEGORIES:AI,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -256,119 +272,134 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:amld2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20270201
-DTEND;VALUE=DATE:20270206
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20270209
+DTEND;VALUE=DATE:20270212
 SUMMARY:AMLD - Applied Machine Learning Days EPFL (TENTATIVO)
 LOCATION:Lausana, Suiza
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (edicion d
- e febrero); confirmar en appliedmldays.org.
+DESCRIPTION:VERIFICADO 01-ago-2026: sin fecha oficial de 2027 anunciada au
+ n en appliedmldays.org. Estimacion ajustada al patron reciente: AMLD 2026
+  se celebro 10-12 feb 2026 (antes: 2025 fue 11-14 feb). Confirmar en appl
+ iedmldays.org.
 CATEGORIES:AI,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ethack2026@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20260912
 DTEND;VALUE=DATE:20260914
-SUMMARY:ETHack 2026
+SUMMARY:ETHack 2026 (TENTATIVO)
 LOCATION:ETH Zurich, Suiza
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Hackathon de innovacion d
- e 24h. Confirmar fecha en ethack.ch.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro informacion oficial sob
+ re este evento (ni en busquedas ni accediendo a ethack.ch). Podria tratar
+ se de un evento de bajo perfil o discontinuado. Se mantiene la fecha orig
+ inal sin cambios; recomendable confirmar si el evento sigue activo antes 
+ de planificar.
 CATEGORIES:Startups,Hackathon
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:tumai2026@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20261010
 DTEND;VALUE=DATE:20261013
 SUMMARY:TUM.ai Hackathon 2026 (TENTATIVO)
 LOCATION:Munich, Alemania
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada segun patr
- on de anios anteriores (octubre); confirmar en tum-ai.com.
+DESCRIPTION:VERIFICADO 01-ago-2026 en tum-ai.com/events: el hackathon insi
+ gnia de TUM.ai en 2025 (con Anthropic\, Lovable\, Hugging Face) fue en se
+ ptiembre (24-26 sep 2025)\, y hubo tambien hackathons de socios (BMW\, BK
+ W) en octubre 2025. Aun no hay fecha publicada para el evento insignia de
+  otono 2026 a fecha de esta verificacion. Confirmar en tum-ai.com/events.
 CATEGORIES:AI,Hackathon
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ellis_doctoral_symp_2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270705
 DTEND;VALUE=DATE:20270710
 SUMMARY:ELLIS Doctoral Symposium 2027 (TENTATIVO)
 LOCATION:Sede rotativa (Europa)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (verano); 
- confirmar en ellis.eu.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro anuncio oficial de fech
+ a/sede 2027 en ellis.eu. Se mantiene la estimacion original (patron de ve
+ rano). Confirmar en ellis.eu.
 CATEGORIES:AI,PhD,Networking
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ellis_summer_munich_2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270802
 DTEND;VALUE=DATE:20270807
 SUMMARY:ELLIS Summer School Munich 2027 (TENTATIVO)
 LOCATION:Munich, Alemania
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada; confirmar
-  en ellis.eu.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro anuncio oficial de fech
+ a 2027 en ellis.eu. Se mantiene la estimacion original. Confirmar en elli
+ s.eu.
 CATEGORIES:AI,SummerSchool
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:lxmls2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270719
 DTEND;VALUE=DATE:20270727
 SUMMARY:LxMLS - Lisbon Machine Learning School 2027 (TENTATIVO)
 LOCATION:Lisboa, Portugal
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  julio); confirmar en lxmls.it.pt.
+DESCRIPTION:VERIFICADO 01-ago-2026: LxMLS 2026 (16a edicion) confirmada of
+ icialmente para el 20-25 jul 2026 (6 dias\, Instituto Superior Tecnico). 
+ Aun no hay fecha 2027 publicada; el patron de julio se mantiene. Confirma
+ r en lxmls.github.io o lxmls.it.pt cuando se anuncie.
 CATEGORIES:AI,SummerSchool
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:epfl_eth_summer_2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270823
 DTEND;VALUE=DATE:20270904
 SUMMARY:EPFL-ETH Doctoral Summer Schools 2027 (TENTATIVO)
 LOCATION:Suiza (varias sedes)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Ventana estimada segun ed
- iciones 2026 (finales agosto-inicios sept); revisar catalogo especifico ca
- da primavera.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro catalogo especifico 202
+ 7 aun (se publica cada primavera). Se mantiene la ventana estimada de ani
+ os previos.
 CATEGORIES:PhD,SummerSchool
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:zhaw_healthtech_2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270712
 DTEND;VALUE=DATE:20270731
 SUMMARY:ZHAW HealthTech Summer School 2027 (TENTATIVO)
 LOCATION:Zurich/Winterthur, Suiza
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] En 2026 empezo el 13 jul;
-  fecha 2027 aun no publicada. Basado en metodologia Stanford Biodesign.
+DESCRIPTION:VERIFICADO 01-ago-2026: la edicion 2026 del HealthTech Summer 
+ School de ZHAW (via EELISA) se confirmo para julio 2026 ("HealthTech... J
+ ul'26"). Fecha exacta 2027 aun no publicada. Se mantiene estimacion de ju
+ lio.
 CATEGORIES:HealthTech,SummerSchool
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:zhaw_winter_2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270125
 DTEND;VALUE=DATE:20270206
 SUMMARY:ZHAW International Winter School 2027 (TENTATIVO)
 LOCATION:Zurich, Suiza
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Programa confirmado para 
- 2027, pero fechas exactas de curso aun no publicadas (registro abierto des
- de junio 2026).
+DESCRIPTION:VERIFICADO 01-ago-2026: programa 2027 confirmado (via COHEHRE)
+ \, con inscripciones para universidades socias abiertas hasta 30-sep-2026
+  y registro general desde junio 2026\, pero las fechas exactas del curso 
+ todavia no estan publicadas. Confirmar en zhaw.ch cuando se anuncien.
 CATEGORIES:HealthTech,WinterSchool
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -413,41 +444,50 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:vivatech2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20270609
-DTEND;VALUE=DATE:20270613
-SUMMARY:VivaTech 2027 (TENTATIVO)
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20270616
+DTEND;VALUE=DATE:20270619
+SUMMARY:VivaTech 2027
 LOCATION:Paris, Francia
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  junio); confirmar en vivatechnology.com.
+DESCRIPTION:CONFIRMADO 01-ago-2026: 11a edicion de VivaTech\, 16-19 junio 
+ 2027\, Paris Expo Porte de Versailles (fuente: vivatech.com/media/press-r
+ eleases y multiples fuentes coincidentes). Fecha corregida respecto a la 
+ estimacion previa (9-13 jun).
 CATEGORIES:Startups,Networking
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:hellotomorrow2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270310
 DTEND;VALUE=DATE:20270313
-SUMMARY:Hello Tomorrow Global Summit 2027 (TENTATIVO)
-LOCATION:Paris, Francia
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  marzo); confirmar en hello-tomorrow.org.
+SUMMARY:Hello Tomorrow Global Summit 2027 (TENTATIVO - ALERTA: patron camb
+ io)
+LOCATION:Paris, Francia (posible cambio - ver nota)
+DESCRIPTION:ALERTA 01-ago-2026: el patron asumido (Paris\, marzo) ya NO es
+  fiable. La edicion 2026 se traslado a AMSTERDAM y a JUNIO (11-12 jun 202
+ 6\, NDSM)\, rompiendo el patron historico de marzo en Paris. Aun no hay f
+ echa ni sede anunciada para 2027; NO asumir Paris/marzo sin confirmar en 
+ hello-tomorrow.org.
 CATEGORIES:DeepTech,Startups
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:eustartups2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20270520
-DTEND;VALUE=DATE:20270522
-SUMMARY:EU-Startups Summit 2027 (TENTATIVO)
-LOCATION:Sede rotativa (Europa)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  mayo); confirmar en eu-startups.com.
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20270513
+DTEND;VALUE=DATE:20270514
+SUMMARY:EU-Startups Summit 2027
+LOCATION:Valletta, Malta
+DESCRIPTION:CONFIRMADO 01-ago-2026: 13-14 mayo 2027 en Valletta\, Malta (f
+ uente: eventbrite.co.uk oficial de EU-Startups\, coincide con eu-startups
+ .com). El evento ya NO es de sede rotativa: se celebra en Malta desde hac
+ e varias ediciones. Fecha y sede corregidas respecto a la estimacion prev
+ ia (20-22 may\, sede rotativa).
 CATEGORIES:Startups,Networking
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -478,15 +518,17 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:fallingwalls2026@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20261107
-DTEND;VALUE=DATE:20261110
-SUMMARY:Falling Walls Science Summit 2026 (TENTATIVO)
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261109
+SUMMARY:Falling Walls Science Summit 2026
 LOCATION:Berlin, Alemania
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (coincide 
- tradicionalmente con el 9 de nov); confirmar en falling-walls.com.
+DESCRIPTION:CONFIRMADO 01-ago-2026: 6-9 noviembre 2026\, Falling Walls Sci
+ ence House\, Berlin (fuente: falling-walls.com\, multiples paginas oficia
+ les coincidentes). Fecha corregida respecto a la estimacion previa (7-10 
+ nov).
 CATEGORIES:Science,Innovation
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
@@ -504,107 +546,188 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:codewithclaude2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270510
 DTEND;VALUE=DATE:20270511
 SUMMARY:Code with Claude 2027 (TENTATIVO)
-LOCATION:Ciudades por anunciar (SF/Londres/Tokio en 2026)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] La edicion 2026 se celebr
- o en SF (6 may), Londres (19 may) y Tokio (10 jun). Sin fecha oficial 2027
-  todavia.
+LOCATION:Ciudades por anunciar
+DESCRIPTION:VERIFICADO 01-ago-2026: la edicion 2026 se confirmo en San Fra
+ ncisco (6 may)\, Londres (19 may) y Tokio (10 jun). Aun sin fecha ni sede
+ s oficiales para 2027. Confirmar en claude.com/code-with-claude o anthrop
+ ic.com/events cuando se anuncie.
 CATEGORIES:AI,Industry
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:waic2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270716
 DTEND;VALUE=DATE:20270720
 SUMMARY:WAIC - World AI Conference 2027 (TENTATIVO)
 LOCATION:Shanghai, China
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] En 2026 se celebro 17-20 
- jul; fecha 2027 aun no anunciada oficialmente.
+DESCRIPTION:VERIFICADO 01-ago-2026: WAIC 2026 se confirmo oficialmente par
+ a 17-20 jul 2026 en Shanghai (fuente: People\'s Daily / gobierno chino). 
+ Aun sin fecha oficial 2027. Estimacion mantenida en base al patron de jul
+ io.
 CATEGORIES:AI,China,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:baai2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270604
 DTEND;VALUE=DATE:20270607
 SUMMARY:BAAI Conference 2027 (TENTATIVO)
 LOCATION:Pekin, China
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  junio); confirmar en baai.ac.cn.
+DESCRIPTION:VERIFICADO 01-ago-2026: la 8a BAAI Conference se celebro el 12
+  jun 2026 en Beijing (patron "cada junio" confirmado por BAAI). Aun sin f
+ echa oficial 2027. Estimacion mantenida en base al patron de junio.
 CATEGORIES:AI,China,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:acml2026@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20261116
-DTEND;VALUE=DATE:20261120
-SUMMARY:ACML 2026 (TENTATIVO)
-LOCATION:Sede rotativa (Asia-Pacifico)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  noviembre); confirmar en acml-conf.org.
-CATEGORIES:AI,Asia,Conference
-STATUS:TENTATIVE
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20261201
+DTEND;VALUE=DATE:20261204
+SUMMARY:ACML 2026
+LOCATION:Melbourne, Australia
+DESCRIPTION:CONFIRMADO 01-ago-2026: 18a Asian Conference on Machine Learni
+ ng\, 1-4 diciembre 2026\, Melbourne\, Australia (justo antes de NeurIPS 2
+ 026 en Sidney\, 6-12 dic) (fuente: acml-conf.org/2026). Fecha y sede corr
+ egidas respecto a la estimacion previa (16-20 nov\, sede rotativa Asia-Pa
+ cifico).
+CATEGORIES:AI,DataMining,Conference
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:pakdd2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
-DTSTART;VALUE=DATE:20270511
-DTEND;VALUE=DATE:20270515
-SUMMARY:PAKDD 2027 (TENTATIVO)
-LOCATION:Sede rotativa (Asia-Pacifico)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  mayo); confirmar en pakdd.org.
+DTSTAMP:20260801T120000Z
+DTSTART;VALUE=DATE:20270609
+DTEND;VALUE=DATE:20270612
+SUMMARY:PAKDD 2027
+LOCATION:Hong Kong SAR, China
+DESCRIPTION:ACTUALIZADO 01-ago-2026: trackers especializados (mpc-deadline
+ s.github.io) indican PAKDD 2027 en Hong Kong SAR\, 9-12 jun 2027\, con de
+ adline de submission 15-nov-2026. No se encontro aun el sitio oficial pak
+ dd2027.org para confirmar de forma primaria; verificar cuando este dispon
+ ible. Fecha y sede actualizadas respecto a la estimacion previa (11-15 ma
+ y\, sede rotativa).
 CATEGORIES:AI,DataMining,Asia
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:rikenaip2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270315
 DTEND;VALUE=DATE:20270318
 SUMMARY:RIKEN AIP Symposium 2027 (TENTATIVO)
 LOCATION:Tokio, Japon
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada; confirmar
-  en aip.riken.jp.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro informacion adicional s
+ obre fecha 2027 en busquedas realizadas. Se mantiene la estimacion origin
+ al. Confirmar en aip.riken.jp.
 CATEGORIES:AI,Japan,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:jsai2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270608
 DTEND;VALUE=DATE:20270612
 SUMMARY:JSAI Annual Conference 2027 (TENTATIVO)
 LOCATION:Japon (sede rotativa)
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  junio); confirmar en ai-gakkai.or.jp.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro fecha especifica 2027 e
+ n ai-gakkai.or.jp en esta busqueda (el sitio no listaba aun el proximo co
+ ngreso anual mas alla de referencias a JSAI2026). Se mantiene la estimaci
+ on de junio. Confirmar en ai-gakkai.or.jp.
 CATEGORIES:AI,Japan,Conference
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:atxai2027@arturo-phd-calendar
-DTSTAMP:20260801T091601Z
+DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270525
 DTEND;VALUE=DATE:20270530
 SUMMARY:ATxAI / ATxSummit 2027 (TENTATIVO)
 LOCATION:Singapur
-DESCRIPTION:[TENTATIVO - confirmar fecha oficial] Fecha estimada (patron de
-  mayo); confirmar en atxsummit.com.
+DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro fecha oficial 2027 en e
+ sta busqueda. Ediciones previas (ATxSG/ATxSummit) se celebraron a fines d
+ e mayo. Se mantiene la estimacion. Confirmar en atxsummit.com.
 CATEGORIES:AI,Singapore,Conference
 STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:esann2026@arturo-phd-calendar
+DTSTAMP:20260801T140000Z
+DTSTART;VALUE=DATE:20260422
+DTEND;VALUE=DATE:20260424
+SUMMARY:ESANN 2026 - European Symp. on Artificial Neural Networks, CI and 
+ ML
+LOCATION:Bruges, Belgica
+DESCRIPTION:AÑADIDO 01-ago-2026: muy relevante para tu linea de investigac
+ ion (DC5\, drift/XAI en redes\, supervisora Barbara Hammer). 34a edicion\
+ , formato hibrido. Venue clasico de Hammer/Bielefeld para trabajos de det
+ eccion y explicacion de drift. Confirmado en esann.org.
+CATEGORIES:AI,ML,Conference,Relevante-DC5
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ijcnn_wcci2026@arturo-phd-calendar
+DTSTAMP:20260801T140000Z
+DTSTART;VALUE=DATE:20260621
+DTEND;VALUE=DATE:20260626
+SUMMARY:IJCNN 2026 (dentro de IEEE WCCI 2026)
+LOCATION:Maastricht, Paises Bajos
+DESCRIPTION:AÑADIDO 01-ago-2026: muy relevante - IJCNN es donde tu grupo (
+ Hammer/Vaquet et al.) publico "Localizing Anomalies in Critical Infrastru
+ cture using Model-Based Drift Explanations" (IJCNN 2024)\, articulo citad
+ o en la descripcion de tu propio proyecto DC5. En 2026 se celebra dentro 
+ del megacongreso IEEE WCCI (con FUZZ-IEEE y IEEE CEC)\, Maastricht\, cerc
+ a de Bielefeld. Confirmado en attend.ieee.org/wcci-2026.
+CATEGORIES:AI,ML,Conference,Relevante-DC5
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:xai_world_conf2026@arturo-phd-calendar
+DTSTAMP:20260801T140000Z
+DTSTART;VALUE=DATE:20260701
+DTEND;VALUE=DATE:20260703
+SUMMARY:xAI 2026 - 4th World Conference on eXplainable Artificial Intellig
+ ence
+LOCATION:Fortaleza, Brasil
+DESCRIPTION:AÑADIDO 01-ago-2026: extremadamente relevante para tu tema de 
+ tesis (Explainable AI). Incluye Doctoral Consortium (ideal para un DC de 
+ MSCA en su primer/segundo año) y sesiones especiales como "XAI for time s
+ eries" y "Explainable AI for sequential decision-making"\, cercanas a tu 
+ trabajo en drift en datos de red. Confirmado en xaiworldconference.com/20
+ 26.
+CATEGORIES:AI,XAI,Conference,Relevante-DC5
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:icann2026@arturo-phd-calendar
+DTSTAMP:20260801T140000Z
+DTSTART;VALUE=DATE:20260914
+DTEND;VALUE=DATE:20260917
+SUMMARY:ICANN 2026 - Intl. Conference on Artificial Neural Networks
+LOCATION:Padua, Italia
+DESCRIPTION:AÑADIDO 01-ago-2026: 35a edicion\, organizada con la European 
+ Neural Network Society (ENNS). Relevante como venue de redes neuronales/I
+ A en Europa\, aunque de perfil algo mas general que ESANN/IJCNN para tu t
+ ema especifico. Confirmado en e-nns.org/icann2026.
+CATEGORIES:AI,ML,Conference
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 END:VCALENDAR
