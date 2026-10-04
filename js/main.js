@@ -258,17 +258,38 @@ fetch(CV, { method: 'HEAD' }).then(r => {
 const COLUMN_HALF = 360;   // half the width of the main column, px
 const inMargin = e => innerWidth > 900 && Math.abs(e.clientX - innerWidth / 2) > COLUMN_HALF
   && !(e.target instanceof Element && e.target.closest('a, button, input, textarea, dialog, [role="button"], .reader'));
+const isDark = () => document.documentElement.dataset.theme === 'dark';
 
-function setTheme(theme, remember) {
-  document.body.classList.add('theme-fade');
+function applyTheme(theme, remember) {
   document.documentElement.dataset.theme = theme;
   if (remember) try { sessionStorage.setItem('theme', theme); } catch {}
   dispatchEvent(new Event('themechange'));
-  setTimeout(() => document.body.classList.remove('theme-fade'), 600);
 }
-document.addEventListener('click', e => {
-  if (inMargin(e)) setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark', true);
-});
+
+// the new theme spreads out from the click in a growing circle
+function switchThemeFrom(x, y) {
+  const theme = isDark() ? 'light' : 'dark';
+  hideHint();
+  hintSeen = true; clearTimeout(hintTimer);   // they found the switch on their own
+  try { localStorage.setItem('marginHintSeen', '1'); } catch {}
+  if (reduceMotion) return applyTheme(theme, true);
+  if (!document.startViewTransition) {   // older browsers: a plain fade
+    document.body.classList.add('theme-fade');
+    applyTheme(theme, true);
+    return setTimeout(() => document.body.classList.remove('theme-fade'), 600);
+  }
+  // a bit past the farthest corner, so the edge leaves the screen still moving instead of stopping at it
+  const radius = 1.25 * Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
+  document.startViewTransition(() => applyTheme(theme, true)).ready.then(() => {
+    document.documentElement.animate(
+      { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
+      { duration: 1100, easing: 'cubic-bezier(.35, 0, .3, 1)', pseudoElement: '::view-transition-new(root)' }
+    );
+  });
+}
+
+document.addEventListener('click', e => { if (inMargin(e)) switchThemeFrom(e.clientX, e.clientY); });
+// over the margins the cursor becomes a moon (or a sun at night): that's what a click will bring
 document.addEventListener('pointermove', e => {
   document.documentElement.classList.toggle('in-margin', inMargin(e));
 }, { passive: true });
@@ -276,5 +297,40 @@ document.addEventListener('pointermove', e => {
 matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
   let chosen = null;
   try { chosen = sessionStorage.getItem('theme'); } catch {}
-  if (!chosen) setTheme(e.matches ? 'dark' : 'light', false);
+  if (!chosen) applyTheme(e.matches ? 'dark' : 'light', false);
 });
+
+// ---------- A one-time whisper in the margin, so people find the switch ----------
+let hint = null;
+function hideHint() {
+  if (!hint) return;
+  const h = hint;
+  hint = null;
+  h.classList.remove('show');
+  setTimeout(() => h.remove(), 900);
+}
+// it appears once the cursor has rested on the margin for 5 seconds, right next to it
+let hintSeen = false, hintTimer = 0;
+try { hintSeen = !!localStorage.getItem('marginHintSeen'); } catch {}
+function showHint(x, y) {
+  if (innerWidth < 1160 || document.body.classList.contains('locked')) return;   // needs a wide margin, and no open CV
+  hintSeen = true;
+  try { localStorage.setItem('marginHintSeen', '1'); } catch {}
+  const marginWidth = innerWidth / 2 - COLUMN_HALF;
+  hint = document.createElement('p');
+  hint.className = 'margin-hint';
+  hint.setAttribute('aria-hidden', 'true');
+  hint.textContent = isDark() ? 'psst… click out here for day ☀' : 'psst… click out here for night ☾';
+  hint.style.width = (marginWidth - 60) + 'px';
+  hint.style.left = (x < innerWidth / 2 ? marginWidth / 2 : innerWidth - marginWidth / 2) + 'px';
+  hint.style.top = Math.min(y + 48, innerHeight - 60) + 'px';
+  document.body.append(hint);
+  requestAnimationFrame(() => requestAnimationFrame(() => hint && hint.classList.add('show')));
+  setTimeout(hideHint, 8000);
+}
+document.addEventListener('pointermove', e => {
+  if (hintSeen) return;
+  clearTimeout(hintTimer);
+  if (inMargin(e)) hintTimer = setTimeout(() => showHint(e.clientX, e.clientY), 5000);
+}, { passive: true });
+document.documentElement.addEventListener('pointerleave', () => clearTimeout(hintTimer));
