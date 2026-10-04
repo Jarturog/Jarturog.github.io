@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&family=Special+Elite&display=swap" rel="stylesheet" />
   <style>
-    /* Your photo: put it at assets/mountain.jpg (until then, the drawn mountain is shown). */
+    /* Your photo: assets/mountain.jpeg (if it's missing, the drawn mountain is shown). */
 
     :root {
       --bg: #f3eee4;
@@ -73,6 +73,8 @@
       min-height: 100vh;
     }
     body.locked { overflow: hidden; }
+    /* the torn strip flies off to the side; don't let it widen the page on phones */
+    main { overflow-x: clip; }
     a { color: inherit; }
 
     /* ---------- CV button in the corner ---------- */
@@ -96,14 +98,7 @@
       font: clamp(2rem, 7vw, 4rem)/1.1 'Special Elite', monospace;
       margin: 0;
       letter-spacing: -.01em;
-      min-height: 1.1em;
     }
-    .caret {
-      display: inline-block; width: .08em; height: .9em; margin-left: .06em;
-      background: currentColor; vertical-align: -.08em;
-      animation: blink 1s steps(1) infinite;
-    }
-    @keyframes blink { 50% { opacity: 0; } }
     .byline { color: var(--muted); margin: 14px 0 0; font-size: 1rem; }
 
     /* ---------- Postcard ---------- */
@@ -167,6 +162,7 @@
       object-fit: cover; display: block;
     }
     .photo img {
+      object-position: 50% 42%; /* keep the peak, the face and the sign in frame */
       transform: translate(calc(var(--px, 0) * -8px), calc(var(--py, 0) * -6px));
       transition: transform .35s ease-out;
     }
@@ -280,6 +276,20 @@
     @keyframes breathe { 50% { opacity: .45; } }
     .stage.opened + .hint { opacity: 0; animation: none; }
 
+    /* ---------- Questions (typed on index cards) ---------- */
+    .questions { list-style: none; padding: 0; margin: 0 auto; max-width: 520px; display: flex; flex-direction: column; gap: 22px; }
+    .questions li {
+      padding: 30px 28px 22px;
+      font: 17px/26px 'Special Elite', monospace; color: var(--paper-ink);
+      background:
+        linear-gradient(var(--accent), var(--accent)) 0 20px / 100% 1.5px no-repeat,
+        repeating-linear-gradient(transparent 0 25px, rgba(70, 110, 170, .2) 25px 26px) 0 30px / 100% calc(100% - 30px) no-repeat,
+        var(--paper);
+      box-shadow: 0 10px 20px -12px rgba(0, 0, 0, .35);
+      transform: rotate(-1deg);
+    }
+    .questions li:nth-child(even) { transform: rotate(1.2deg); }
+
     /* ---------- Links ---------- */
     section { width: min(720px, calc(100% - 32px)); margin: 0 auto; }
     .links-title {
@@ -372,7 +382,7 @@
   <button class="cv-fab" type="button" aria-label="Open my CV">CV</button>
 
   <header>
-    <h1 aria-label="i also like other stuff"><span id="typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span></h1>
+    <h1>i also like other stuff</h1>
     <p class="byline">Juan Arturo Abaurrea Calafell · machine learning researcher</p>
   </header>
 
@@ -406,7 +416,7 @@
                   </g>
                   <g class="l-near"><path d="M-20 335 Q110 292 220 330 T430 318 T620 300 L620 420 L-20 420 Z" /></g>
                 </svg>
-                <img src="assets/mountain.jpg" alt="Me on a mountain" onerror="this.remove()" />
+                <img src="assets/mountain.jpeg" alt="Me on a mountain" onerror="this.remove()" />
               </div>
 
               <div class="stamp" aria-hidden="true">
@@ -442,7 +452,7 @@
                   <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
                     <path d="M0 100 L50 46 L100 100 M0 0 L44 52 M100 0 L56 52" />
                   </svg>
-                  <div class="env-address">to: whoever is curious<br />from: juan arturo</div>
+                  <div class="env-address">to: whoever is curious<br />from: arturo</div>
                 </div>
                 <div class="env-strip" id="envStrip">✂ - - - - - tear here - - - - -</div>
               </div>
@@ -453,6 +463,17 @@
       </div>
     </div>
     <p class="hint">tap the postcard</p>
+
+    <section aria-labelledby="questions-title">
+      <h2 class="links-title reveal" id="questions-title">some thoughts</h2>
+      <!-- one <li> per thought -->
+      <ul class="questions reveal">
+        <li>is approximating the data manifold in latent space really the best way to learn?</li>
+        <li>maybe it would be better if our artificial neural networks resembled the biological ones a bit more.</li>
+        <li>i wonder how many different ways there are to build an intelligence as good as the brain.</li>
+        <li>learning is compression.</li>
+      </ul>
+    </section>
 
     <section aria-labelledby="links-title">
       <h2 class="links-title reveal" id="links-title">find me elsewhere</h2>
@@ -474,8 +495,8 @@
       <ul class="papers reveal" aria-label="Papers and theses">
         <li><a href="assets/backdoor-review.pdf" target="_blank" rel="noopener"><span>Backdoor Detection &amp; Mitigation in Neural Networks</span><span class="kind">survey</span></a></li>
         <li><a href="assets/snn-survey.pdf" target="_blank" rel="noopener"><span>Spiking Neural Networks: A Comprehensive Literature Review</span><span class="kind">survey</span></a></li>
-        <li><a href="assets/master-thesis.pdf" target="_blank" rel="noopener"><span>Master Thesis</span><span class="kind">thesis</span></a></li>
-        <li><a href="assets/bachelor-thesis.pdf" target="_blank" rel="noopener"><span>Bachelor Thesis</span><span class="kind">thesis</span></a></li>
+        <li><a href="assets/master-thesis.pdf" target="_blank" rel="noopener"><span>Turning Neural Networks Against Each Other: Multi-Layer Backdoor Detection in Deep Neural Networks</span><span class="kind">master thesis</span></a></li>
+        <li><a href="assets/bachelor-thesis.pdf" target="_blank" rel="noopener"><span>Chatbot for Patient Guidance During Preparation of Colonoscopy</span><span class="kind">bachelor thesis</span></a></li>
       </ul>
     </section>
   </main>
@@ -505,16 +526,6 @@
     const stage = $('stage'), card = $('postcard'), envelope = $('envelope'), letter = $('letter');
     const reader = $('reader'), pages = $('pages'), readerScroll = $('readerScroll');
 
-    // ---------- Title types itself ----------
-    (async () => {
-      const text = 'i also like other stuff', el = $('typed');
-      if (reduceMotion) { el.textContent = text; return; }
-      await wait(400);
-      for (const ch of text) {
-        el.textContent += ch;
-        await wait(ch === ' ' ? 120 : 55 + Math.random() * 70);
-      }
-    })();
 
     // ---------- Stars for the night sky ----------
     (() => {
