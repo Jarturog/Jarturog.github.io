@@ -36,6 +36,7 @@
       --snow: #ffffff;
       --stars: 0;
       --shadow: 0 22px 45px -18px rgba(40, 30, 10, .45);
+      --topo: rgba(120, 95, 60, .28);
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -60,6 +61,7 @@
         --snow: #c9d2ea;
         --stars: 1;
         --shadow: 0 22px 45px -18px rgba(0, 0, 0, .8);
+      --topo: rgba(150, 170, 235, .22);
       }
     }
 
@@ -76,6 +78,20 @@
     /* the torn strip flies off to the side; don't let it widen the page on phones */
     main { overflow-x: clip; }
     a { color: inherit; }
+
+    /* ---------- Contour-map background in the side margins (wide screens only) ---------- */
+    .topo {
+      position: fixed; inset: 0; z-index: -1; pointer-events: none;
+      /* fade the map out behind the main column */
+      -webkit-mask: linear-gradient(to right, #000 calc(50% - 560px), transparent calc(50% - 330px), transparent calc(50% + 330px), #000 calc(50% + 560px));
+      mask: linear-gradient(to right, #000 calc(50% - 560px), transparent calc(50% - 330px), transparent calc(50% + 330px), #000 calc(50% + 560px));
+    }
+    .topo div {
+      position: absolute; inset: 0; background: var(--topo);
+      -webkit-mask: url(assets/topo.svg) center / cover no-repeat;
+      mask: url(assets/topo.svg) center / cover no-repeat;
+    }
+    @media (max-width: 900px) { .topo { display: none; } }
 
     /* ---------- CV button in the corner ---------- */
     .cv-fab {
@@ -431,6 +447,7 @@
   </style>
 </head>
 <body>
+  <div class="topo" aria-hidden="true"><div></div></div>
   <button class="cv-fab" type="button" aria-label="Open my CV">CV</button>
 
   <header>
