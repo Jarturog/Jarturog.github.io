@@ -289,6 +289,58 @@
       transform: rotate(-1deg);
     }
     .questions li:nth-child(even) { transform: rotate(1.2deg); }
+    .questions li { position: relative; transition: transform .2s; }
+    .questions li:hover, .questions li:focus-within { transform: rotate(0) translateY(-3px); }
+    .questions button { all: unset; display: block; cursor: pointer; }
+    .questions button::before { content: ''; position: absolute; inset: 0; } /* whole card is clickable */
+    .questions button:focus-visible::before { outline: 3px solid var(--accent); outline-offset: 4px; }
+
+    /* ---------- Reply box (sent through Web3Forms, so the email address stays hidden) ---------- */
+    .reply {
+      border: 0; padding: 0; background: transparent; overflow: visible;
+      width: min(520px, calc(100% - 32px)); max-width: none;
+    }
+    .reply::backdrop { background: rgba(10, 12, 20, .6); -webkit-backdrop-filter: blur(3px); backdrop-filter: blur(3px); }
+    .reply[open] { animation: drop .35s cubic-bezier(.2, .8, .2, 1); }
+    @keyframes drop { from { opacity: 0; transform: translateY(18px) rotate(-2deg); } }
+    .reply-card {
+      margin: 0; padding: 30px 26px 20px;
+      background: linear-gradient(var(--accent), var(--accent)) 0 20px / 100% 1.5px no-repeat, var(--paper);
+      color: var(--paper-ink); font: 15px 'Special Elite', monospace;
+      box-shadow: 0 24px 50px -18px rgba(0, 0, 0, .6);
+    }
+    .reply-thought { margin: 0 0 16px; line-height: 1.5; }
+    .reply-thought::before { content: 're: '; color: var(--accent); }
+    .reply-card textarea, .reply-card input {
+      display: block; width: 100%; margin: 0 0 12px; padding: 0 2px;
+      font: 15px/26px 'Special Elite', monospace; color: var(--paper-ink);
+      border: 0; outline: 0; resize: vertical;
+      background: repeating-linear-gradient(transparent 0 25px, rgba(70, 110, 170, .3) 25px 26px);
+    }
+    .reply-card textarea { min-height: 130px; }
+    .reply-card input { height: 26px; }
+    .reply-card textarea:focus, .reply-card input:focus {
+      background-color: rgba(212, 85, 58, .05);
+    }
+    .reply-card ::placeholder { color: var(--paper-ink); opacity: .45; }
+    .trap { position: absolute; left: -9999px; }
+    .reply-actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 6px; }
+    .reply-actions button {
+      font: 15px 'Special Elite', monospace; cursor: pointer;
+      border: 1.5px solid var(--paper-ink); border-radius: 999px; padding: 6px 16px;
+      background: transparent; color: var(--paper-ink);
+    }
+    .reply-actions .send { background: var(--accent); border-color: var(--accent); color: #fffaf0; }
+    .reply-actions button:disabled { opacity: .5; cursor: wait; }
+    .reply-status { margin: 10px 0 0; min-height: 1.2em; font-size: 14px; text-align: right; }
+    .reply-status.ok { color: #3f7d4a; }
+    .reply-status.err { color: var(--accent); }
+    .questions li::after {
+      content: '✉ reply'; position: absolute; right: 14px; bottom: 5px;
+      font: 12px 'Special Elite', monospace; color: var(--accent);
+      opacity: 0; transition: opacity .2s;
+    }
+    .questions li:hover::after, .questions li:focus-within::after { opacity: 1; }
 
     /* ---------- Links ---------- */
     section { width: min(720px, calc(100% - 32px)); margin: 0 auto; }
@@ -504,6 +556,21 @@
   <footer>Juan Arturo Abaurrea Calafell <span id="updated"></span></footer>
 
   <!-- The CV, once it's out of the envelope -->
+  <!-- Reply to a thought -->
+  <dialog class="reply" id="reply" aria-labelledby="replyThought">
+    <form class="reply-card" id="replyForm">
+      <p class="reply-thought" id="replyThought"></p>
+      <textarea name="message" required placeholder="what do you think?" aria-label="Your answer"></textarea>
+      <input type="email" name="email" placeholder="your email, if you want an answer" aria-label="Your email (optional)" />
+      <input type="checkbox" name="botcheck" class="trap" tabindex="-1" autocomplete="off" aria-hidden="true" />
+      <div class="reply-actions">
+        <button type="button" id="replyCancel">cancel</button>
+        <button type="submit" class="send" id="replySend">send ✉</button>
+      </div>
+      <p class="reply-status" id="replyStatus" role="status"></p>
+    </form>
+  </dialog>
+
   <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="My CV" hidden>
     <div class="reader-bar">
       <span class="title">curriculum vitae <small id="updated2"></small></span>
@@ -566,6 +633,64 @@
       stage.addEventListener('pointerleave', resetTilt);
     }
     function resetTilt() { ['--rx', '--ry', '--px', '--py'].forEach(p => card.style.removeProperty(p)); }
+
+    // ---------- Each thought opens a reply box (sent to my inbox by Web3Forms) ----------
+    const WEB3FORMS_KEY = 'f8be6e98-0181-40bb-aa4a-a28c83e4b4a5'; // public on purpose: it can only send messages to me
+    const replyDlg = $('reply'), replyForm = $('replyForm'), replyStatus = $('replyStatus'), replySend = $('replySend');
+    let replyTo = '', closeTimer;
+
+    document.querySelectorAll('.questions li').forEach(li => {
+      const thought = li.textContent.trim(), b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = thought;
+      b.addEventListener('click', () => openReply(thought));
+      li.replaceChildren(b);
+    });
+
+    function openReply(thought) {
+      clearTimeout(closeTimer);
+      replyTo = thought;
+      $('replyThought').textContent = thought;
+      replyForm.reset();
+      replyStatus.textContent = ''; replyStatus.className = 'reply-status';
+      replySend.disabled = false;
+      replyDlg.showModal();
+      replyForm.message.focus();
+    }
+    $('replyCancel').addEventListener('click', () => replyDlg.close());
+    replyDlg.addEventListener('click', e => { if (e.target === replyDlg) replyDlg.close(); }); // click outside the card
+
+    replyForm.addEventListener('submit', async e => {
+      e.preventDefault();
+      if (replyForm.botcheck.checked) return;
+      replySend.disabled = true;
+      replyStatus.className = 'reply-status';
+      replyStatus.textContent = 'sending…';
+      const body = {
+        access_key: WEB3FORMS_KEY,
+        subject: 're: ' + replyTo,
+        from_name: 'jarturog.github.io',
+        thought: replyTo,
+        message: replyForm.message.value,
+      };
+      if (replyForm.email.value) body.email = replyForm.email.value;
+      try {
+        const r = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+          body: JSON.stringify(body),
+        });
+        const data = await r.json();
+        if (!data.success) throw new Error(data.message);
+        replyStatus.className = 'reply-status ok';
+        replyStatus.textContent = 'sent. thank you!';
+        closeTimer = setTimeout(() => replyDlg.close(), 1600);
+      } catch {
+        replyStatus.className = 'reply-status err';
+        replyStatus.textContent = "couldn't send it, please try again in a moment.";
+        replySend.disabled = false;
+      }
+    });
 
     // ---------- Links fade in on scroll ----------
     const io = new IntersectionObserver(es => es.forEach(e => {
