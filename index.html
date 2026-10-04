@@ -2,199 +2,707 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Juan Arturo Abaurrea Calafell - CV</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Arturo Abaurrea Calafell</title>
+  <meta name="description" content="Juan Arturo Abaurrea Calafell — machine learning researcher. CV, papers and links." />
+  <meta property="og:title" content="Juan Arturo Abaurrea Calafell" />
+  <meta property="og:description" content="i also like other stuff. (the CV is in the envelope.)" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛰️</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600&family=Special+Elite&display=swap" rel="stylesheet" />
   <style>
-    body, html {
+    /* Your photo: put it at assets/mountain.jpg (until then, the drawn mountain is shown). */
+
+    :root {
+      --bg: #f3eee4;
+      --ink: #2a2825;
+      --muted: #6d675d;
+      --paper: #fffdf8;
+      --paper-ink: #4a4640;
+      --accent: #d4553a;
+      --glow-1: #ff9a5a;
+      --glow-2: #ffd36e;
+      --kraft: #d9bb8c;
+      --kraft-line: rgba(90, 60, 20, .16);
+      --kraft-inside: #8b6c43;
+      --postmark: rgba(25, 25, 35, .55);
+      --sky-top: #8ec5ff;
+      --sky-bottom: #ffe1bd;
+      --sun: #ffd36e;
+      --mtn-far: #a9b9d6;
+      --mtn: #6c7c9d;
+      --mtn-near: #4a5878;
+      --snow: #ffffff;
+      --stars: 0;
+      --shadow: 0 22px 45px -18px rgba(40, 30, 10, .45);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0f1320;
+        --ink: #ece6da;
+        --muted: #a39d92;
+        --paper: #ece6d8;
+        --paper-ink: #3f3b35;
+        --accent: #e0694d;
+        --glow-1: #7aa2ff;
+        --glow-2: #c48bff;
+        --kraft: #bfa073;
+        --kraft-line: rgba(50, 30, 5, .22);
+        --kraft-inside: #5e4826;
+        --postmark: rgba(255, 255, 255, .6);
+        --sky-top: #0a0f26;
+        --sky-bottom: #2b305c;
+        --sun: #f1ecd8;
+        --mtn-far: #2d3662;
+        --mtn: #232b4e;
+        --mtn-near: #161c37;
+        --snow: #c9d2ea;
+        --stars: 1;
+        --shadow: 0 22px 45px -18px rgba(0, 0, 0, .8);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: 'Karla', system-ui, sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    body.locked { overflow: hidden; }
+    a { color: inherit; }
+
+    /* ---------- CV button in the corner ---------- */
+    .cv-fab {
+      position: fixed; top: 16px; right: 16px; z-index: 20;
+      font: 15px 'Special Elite', monospace;
+      color: var(--paper-ink); background: var(--paper);
+      border: 1px solid rgba(0, 0, 0, .18);
+      border-radius: 999px; padding: 8px 16px; cursor: pointer;
+      box-shadow: 0 6px 16px -8px rgba(0,0,0,.4);
+      transition: transform .2s;
+    }
+    .cv-fab:hover { transform: translateY(-2px) rotate(-2deg); }
+
+    /* ---------- Title ---------- */
+    header {
+      text-align: center;
+      padding: clamp(72px, 14vh, 140px) 16px 0;
+    }
+    h1 {
+      font: clamp(2rem, 7vw, 4rem)/1.1 'Special Elite', monospace;
       margin: 0;
-      padding: 0;
-      height: 100%;
-      overflow: hidden;
+      letter-spacing: -.01em;
+      min-height: 1.1em;
     }
-    embed, iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
+    .caret {
+      display: inline-block; width: .08em; height: .9em; margin-left: .06em;
+      background: currentColor; vertical-align: -.08em;
+      animation: blink 1s steps(1) infinite;
     }
-    .top-nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0, 102, 204, 0.95);
-      padding: 12px 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .top-nav h1 {
-      margin: 0;
-      font-size: 18px;
-      color: white;
-      font-family: 'Segoe UI', sans-serif;
-      flex-grow: 1;
-      min-width: 200px;
-    }
-    .last-modified {
-      font-size: 12px;
-      font-weight: normal;
-      opacity: 0.9;
-    }
-    .nav-links {
-      display: flex;
-      gap: 10px;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-    .top-nav a {
-      color: white;
-      text-decoration: none;
-      padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 4px;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 14px;
-      transition: background 0.3s;
-      white-space: nowrap;
-    }
-    .top-nav a:hover {
-      background: rgba(255, 255, 255, 0.25);
-    }
-    
-    /* Dropdown styles */
-    .dropdown {
+    @keyframes blink { 50% { opacity: 0; } }
+    .byline { color: var(--muted); margin: 14px 0 0; font-size: 1rem; }
+
+    /* ---------- Postcard ---------- */
+    .stage {
       position: relative;
-      display: inline-block;
+      width: min(560px, calc(100% - 32px));
+      aspect-ratio: 3 / 2;
+      margin: clamp(90px, 16vh, 150px) auto 0;
     }
-    .dropdown-button {
-      color: white;
-      text-decoration: none;
-      padding: 8px 16px;
-      background: rgba(255, 255, 255, 0.15);
-      border-radius: 4px;
-      font-family: 'Segoe UI', sans-serif;
-      font-size: 14px;
-      transition: background 0.3s;
-      white-space: nowrap;
-      cursor: pointer;
-      border: none;
-      display: flex;
-      align-items: center;
-      gap: 6px;
+    .glow {
+      position: absolute; inset: -14px; border-radius: 26px;
+      background: linear-gradient(120deg, var(--glow-1), var(--glow-2), var(--glow-1));
+      filter: blur(26px);
+      animation: pulse 2.6s ease-in-out infinite;
+      transition: opacity .5s;
     }
-    .dropdown-button:hover {
-      background: rgba(255, 255, 255, 0.25);
+    @keyframes pulse {
+      0%, 100% { opacity: .35; transform: scale(.97); }
+      50% { opacity: .9; transform: scale(1.03); }
     }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: calc(100% - 2px);
-      left: 50%;
-      transform: translateX(-50%);
-      background-color: white;
-      min-width: 250px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-      border-radius: 4px;
-      overflow: hidden;
-      padding-top: 5px;
+    .stage.opened .glow { animation: none; opacity: 0; }
+
+    .postcard {
+      position: absolute; inset: 0;
+      perspective: 1400px;
+      cursor: pointer; outline: none;
+      -webkit-tap-highlight-color: transparent;
     }
-    .dropdown-content a {
-      color: #333;
-      padding: 12px 16px;
-      text-decoration: none;
-      display: block;
-      background: white;
-      border-radius: 0;
-      transition: background 0.2s;
+    .postcard:focus-visible .front { outline: 3px solid var(--accent); outline-offset: 6px; }
+    .tilt {
+      position: absolute; inset: 0;
+      transform-style: preserve-3d;
+      transform: rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+      transition: transform .35s ease-out;
     }
-    .dropdown-content a:hover {
-      background: #f1f1f1;
+    .card-inner {
+      position: absolute; inset: 0;
+      transform-style: preserve-3d;
+      transition: transform .85s cubic-bezier(.3, .7, .2, 1);
     }
-    .dropdown:hover .dropdown-content {
-      display: block;
+    .postcard.flipped .card-inner { transform: rotateY(180deg); }
+    .face {
+      position: absolute; inset: 0;
+      backface-visibility: hidden; -webkit-backface-visibility: hidden;
     }
-    .dropdown-arrow {
-      font-size: 10px;
-      transition: transform 0.3s;
+    .back { transform: rotateY(180deg); }
+
+    .front {
+      background: var(--paper);
+      padding: 12px 12px 40px;
+      border-radius: 6px;
+      box-shadow: var(--shadow);
     }
-    .dropdown:hover .dropdown-arrow {
-      transform: rotate(180deg);
+    .photo {
+      position: relative; width: 100%; height: 100%;
+      overflow: hidden; border-radius: 2px;
+      background: var(--sky-top);
     }
-    
-    .pdf-container {
-      margin-top: 50px;
-      height: calc(100% - 50px);
-      position: relative;
+    .photo svg, .photo img {
+      position: absolute; inset: -4%; width: 108%; height: 108%;
+      object-fit: cover; display: block;
     }
-    .pdf-container embed {
-      height: 100%;
+    .photo img {
+      transform: translate(calc(var(--px, 0) * -8px), calc(var(--py, 0) * -6px));
+      transition: transform .35s ease-out;
+    }
+    .scene .sun { fill: var(--sun); }
+    .scene .stars { opacity: var(--stars); }
+    .scene .stars circle { fill: #fff; }
+    .scene .stars .tw { animation: twinkle 3s ease-in-out infinite; }
+    @keyframes twinkle { 50% { opacity: .2; } }
+    .scene .l-far path { fill: var(--mtn-far); }
+    .scene .mtn { fill: var(--mtn); }
+    .scene .snow { fill: var(--snow); }
+    .scene .l-near path { fill: var(--mtn-near); }
+    .scene .flag { fill: var(--accent); }
+    .scene .pole { stroke: var(--mtn-near); stroke-width: 1.5; }
+    .scene g { transition: transform .35s ease-out; }
+    .scene .l-far  { transform: translate(calc(var(--px, 0) * -3px), calc(var(--py, 0) * -2px)); }
+    .scene .l-mid  { transform: translate(calc(var(--px, 0) * -7px), calc(var(--py, 0) * -4px)); }
+    .scene .l-near { transform: translate(calc(var(--px, 0) * -13px), calc(var(--py, 0) * -7px)); }
+
+    .stamp, .stamp-link {
+      /* perforated edges */
+      -webkit-mask:
+        radial-gradient(3px at 3px 3px, #0000 98%, #000) -3px -3px / 8px 8px,
+        linear-gradient(#000 0 0) 4px 4px / calc(100% - 8px) calc(100% - 8px) no-repeat;
+      mask:
+        radial-gradient(3px at 3px 3px, #0000 98%, #000) -3px -3px / 8px 8px,
+        linear-gradient(#000 0 0) 4px 4px / calc(100% - 8px) calc(100% - 8px) no-repeat;
+    }
+    .stamp {
+      position: absolute; top: 24px; right: 24px;
+      width: 58px; height: 70px; padding: 7px;
+      background: #fffaf0;
+      transform: rotate(4deg);
+    }
+    .stamp-inner {
+      width: 100%; height: 100%;
+      background: var(--accent);
+      display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+      padding: 4px 2px 3px;
+      color: #fffaf0; font: 9px 'Special Elite', monospace;
+    }
+    .stamp-inner svg { width: 30px; height: 20px; }
+    .postmark {
+      position: absolute; top: 30px; right: 62px;
+      width: 92px; height: 70px;
+      color: var(--postmark);
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+    .caption {
+      position: absolute; left: 16px; right: 16px; bottom: 11px; margin: 0;
+      display: flex; justify-content: space-between; align-items: baseline;
+      font: 14px 'Special Elite', monospace; color: var(--paper-ink);
+    }
+    .caption span:last-child { opacity: .6; }
+
+    /* ---------- Envelope (back of the card) ---------- */
+    .envelope { position: absolute; inset: 0; }
+    .env-inside {
+      position: absolute; inset: 0; border-radius: 6px;
+      background: var(--kraft-inside);
+      box-shadow: var(--shadow);
+    }
+    .letter {
+      position: absolute; left: 8%; right: 8%; top: 6%; height: 90%;
+      background: #fff; border-radius: 3px; overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,.25);
+      transition: transform .85s cubic-bezier(.2, .8, .2, 1);
+    }
+    .letter canvas { display: block; width: 100%; height: auto; }
+    .letter-fallback { padding: 14% 10%; }
+    .letter-fallback i {
+      display: block; height: 6px; margin: 0 0 9px; border-radius: 3px; background: #e3e0da;
+    }
+    .letter-fallback i:first-child { width: 55%; height: 10px; margin: 0 auto 16px; background: #c9c5bd; }
+    .envelope.out .letter { transform: translateY(-62%); }
+
+    .env-front, .env-strip { position: absolute; left: 0; right: 0; background: var(--kraft); }
+    .env-front { top: 16%; bottom: 0; border-radius: 0 0 6px 6px; }
+    .env-front svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+    .env-front svg path { fill: none; stroke: var(--kraft-line); stroke-width: 1.4; vector-effect: non-scaling-stroke; }
+    .env-address {
+      position: absolute; left: 0; right: 0; bottom: 14%;
+      text-align: center; font: 15px/1.6 'Special Elite', monospace; color: #4b3a20;
+    }
+    .env-strip {
+      top: 0; height: calc(16% + 8px);
+      border-radius: 6px 6px 0 0;
+      display: flex; align-items: center; justify-content: center;
+      font: 12px 'Special Elite', monospace; color: rgba(60, 40, 10, .55);
+      transform-origin: 0 100%;
+    }
+    .envelope.shake .env-strip { animation: shake .25s linear; }
+    .envelope.torn .env-strip { animation: rip .6s cubic-bezier(.4, 0, .6, 1) forwards; }
+    @keyframes shake {
+      25% { transform: translate(-1px, -1px) rotate(-.6deg); }
+      75% { transform: translate(1px, 0) rotate(.6deg); }
+    }
+    @keyframes rip {
+      0% { transform: none; }
+      30% { transform: translate(6px, -4px) rotate(-3deg); }
+      100% { transform: translate(90px, -150px) rotate(-22deg); opacity: 0; }
+    }
+
+    .hint {
+      text-align: center; margin: 30px 0 0;
+      font: 15px 'Special Elite', monospace; color: var(--muted);
+      animation: breathe 2.6s ease-in-out infinite;
+      transition: opacity .4s;
+    }
+    @keyframes breathe { 50% { opacity: .45; } }
+    .stage.opened + .hint { opacity: 0; animation: none; }
+
+    /* ---------- Links ---------- */
+    section { width: min(720px, calc(100% - 32px)); margin: 0 auto; }
+    .links-title {
+      font: 15px 'Special Elite', monospace; color: var(--muted);
+      text-align: center; margin: 110px 0 26px; font-weight: normal;
+    }
+    .stamps { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
+    .stamp-link {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+      width: 116px; height: 136px; padding: 12px;
+      background: var(--paper); color: var(--paper-ink);
+      text-decoration: none; font: 15px 'Special Elite', monospace;
+      transition: transform .25s;
+    }
+    .stamp-link .frame {
+      width: 100%; flex: 1; display: grid; place-items: center;
+      border: 1.5px solid rgba(60, 55, 48, .35);
+    }
+    .stamp-link svg { width: 36px; height: 36px; fill: currentColor; }
+    .stamps-shadow { filter: drop-shadow(0 8px 12px rgba(0,0,0,.18)); }
+    .stamp-link:nth-child(1) { transform: rotate(-4deg); }
+    .stamp-link:nth-child(2) { transform: rotate(3deg); }
+    .stamp-link:nth-child(3) { transform: rotate(-2deg); }
+    .stamp-link:hover, .stamp-link:focus-visible { transform: rotate(0) translateY(-6px) scale(1.04); }
+
+    .papers { list-style: none; padding: 0; margin: 46px auto 0; max-width: 560px; }
+    .papers li + li { margin-top: 10px; }
+    .papers a {
+      display: flex; justify-content: space-between; gap: 16px; align-items: baseline;
+      padding: 14px 18px; text-decoration: none;
+      border: 1.5px dashed var(--muted);
+      border-radius: 8px; transition: transform .2s, border-color .2s;
+    }
+    .papers a:hover { transform: translateX(4px); border-color: var(--accent); }
+    .papers .kind { font: 13px 'Special Elite', monospace; color: var(--muted); white-space: nowrap; }
+
+    footer {
+      text-align: center; color: var(--muted); font-size: 13px;
+      padding: 90px 16px 40px;
+    }
+
+    .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s, transform .7s; }
+    .reveal.seen { opacity: 1; transform: none; }
+
+    /* ---------- CV reader ---------- */
+    .reader {
+      position: fixed; inset: 0; z-index: 50;
+      display: flex; flex-direction: column;
+      background: rgba(10, 12, 20, 0);
+      transition: background .35s;
+    }
+    .reader[hidden] { display: none; }
+    .reader.in { background: rgba(10, 12, 20, .78); -webkit-backdrop-filter: blur(4px); backdrop-filter: blur(4px); }
+    .reader-bar {
+      display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+      padding: 12px 16px; color: #f3eee4;
+      opacity: 0; transition: opacity .35s .2s;
+    }
+    .reader.in .reader-bar { opacity: 1; }
+    .reader-bar .title { flex: 1; font: 16px 'Special Elite', monospace; min-width: 160px; }
+    .reader-bar .title small { opacity: .65; font-family: 'Karla', sans-serif; }
+    .reader-bar a, .reader-bar button {
+      font: 14px 'Karla', sans-serif; color: #f3eee4; text-decoration: none;
+      background: rgba(255,255,255,.12); border: 0; border-radius: 6px;
+      padding: 8px 14px; cursor: pointer;
+    }
+    .reader-bar a:hover, .reader-bar button:hover { background: rgba(255,255,255,.22); }
+    .reader-scroll { flex: 1; overflow: auto; padding: 6px 16px 48px; }
+    .pages { max-width: 860px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+    .page {
+      background: #fff; border-radius: 2px;
+      box-shadow: 0 18px 40px -12px rgba(0,0,0,.6);
+      transition: transform .65s cubic-bezier(.2, .8, .2, 1), opacity .4s .25s;
+    }
+    .page canvas { display: block; width: 100%; height: auto; }
+    .page.placeholder {
+      aspect-ratio: 1 / 1.414; display: grid; place-items: center;
+      font: 15px 'Special Elite', monospace; color: #999;
+    }
+    .reader:not(.in) .page:not(:first-child) { opacity: 0; }
+    .page.fallback { padding: 18px; display: flex; flex-direction: column; gap: 12px; color: #333; }
+    .page.fallback iframe { width: 100%; height: 80vh; border: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
-  <div class="top-nav">
-    <h1>
-      Juan Arturo Abaurrea Calafell
-      <span class="last-modified" id="lastModified">Loading...</span>
-    </h1>
-    <div class="nav-links">
-      <div class="dropdown">
-        <div class="dropdown-button">
-          Papers
-          <span class="dropdown-arrow">▼</span>
-        </div>
-        <div class="dropdown-content">
-          <a href="assets/backdoor-review.pdf" target="_blank">
-            Backdoor Detection & Mitigation in Neural Networks
-          </a>
-          <a href="assets/snn-survey.pdf" target="_blank">
-            Spiking Neural Networks: A Comprehensive Literature Review
-          </a>
-          <a href="assets/bachelor-thesis.pdf" target="_blank">
-            Bachelor Thesis
-          </a>
-          <a href="assets/master-thesis.pdf" target="_blank">
-            Master Thesis
-          </a>
+  <button class="cv-fab" type="button" aria-label="Open my CV">CV</button>
+
+  <header>
+    <h1 aria-label="i also like other stuff"><span id="typed" aria-hidden="true"></span><span class="caret" aria-hidden="true"></span></h1>
+    <p class="byline">Juan Arturo Abaurrea Calafell · machine learning researcher</p>
+  </header>
+
+  <main>
+    <div class="stage" id="stage">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="postcard" id="postcard" role="button" tabindex="0" aria-label="Open the postcard to read my CV">
+        <div class="tilt">
+          <div class="card-inner">
+
+            <!-- Front: the photo -->
+            <div class="face front">
+              <div class="photo">
+                <svg class="scene" viewBox="0 0 600 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0" style="stop-color: var(--sky-top)" />
+                      <stop offset="1" style="stop-color: var(--sky-bottom)" />
+                    </linearGradient>
+                  </defs>
+                  <rect width="600" height="400" fill="url(#sky)" />
+                  <g class="stars"></g>
+                  <circle class="sun" cx="455" cy="92" r="28" />
+                  <g class="l-far"><path d="M-20 262 L70 190 L120 225 L190 150 L250 210 L300 178 L360 232 L420 160 L480 215 L540 180 L620 232 L620 420 L-20 420 Z" /></g>
+                  <g class="l-mid">
+                    <path class="mtn" d="M30 420 L230 120 L290 190 L330 150 L480 340 L540 420 Z" />
+                    <path class="snow" d="M230 120 L205 157 L218 150 L230 163 L244 150 L264 160 Z" />
+                    <path class="snow" d="M330 150 L312 168 L322 165 L332 174 L342 166 L349 175 Z" />
+                    <line class="pole" x1="230" y1="121" x2="230" y2="98" />
+                    <path class="flag" d="M230 98 L247 103 L230 108 Z" />
+                  </g>
+                  <g class="l-near"><path d="M-20 335 Q110 292 220 330 T430 318 T620 300 L620 420 L-20 420 Z" /></g>
+                </svg>
+                <img src="assets/mountain.jpg" alt="Me on a mountain" onerror="this.remove()" />
+              </div>
+
+              <div class="stamp" aria-hidden="true">
+                <div class="stamp-inner">
+                  <svg viewBox="0 0 30 20"><path d="M1 19 L11 5 L15 10 L19 6 L29 19 Z" fill="#fffaf0" /></svg>
+                  <span>2026</span>
+                </div>
+              </div>
+              <svg class="postmark" viewBox="0 0 92 70" aria-hidden="true">
+                <defs><path id="pm-arc" d="M12 35 A23 23 0 0 1 58 35" /></defs>
+                <circle cx="35" cy="35" r="27" fill="none" stroke="currentColor" stroke-width="1.6" />
+                <circle cx="35" cy="35" r="20" fill="none" stroke="currentColor" stroke-width=".8" />
+                <text font-family="Special Elite, monospace" font-size="7.5" fill="currentColor" letter-spacing="1">
+                  <textPath href="#pm-arc" startOffset="50%" text-anchor="middle">PALMA · ULM · MADRID</textPath>
+                </text>
+                <text x="35" y="41" font-family="Special Elite, monospace" font-size="10" text-anchor="middle" fill="currentColor">2026</text>
+                <path d="M62 24 q5 -4 10 0 t10 0 t10 0 M62 35 q5 -4 10 0 t10 0 t10 0 M62 46 q5 -4 10 0 t10 0 t10 0" fill="none" stroke="currentColor" stroke-width="1.4" />
+              </svg>
+
+              <p class="caption"><span>greetings from somewhere high</span><span>✉ open me</span></p>
+            </div>
+
+            <!-- Back: the envelope -->
+            <div class="face back">
+              <div class="envelope" id="envelope">
+                <div class="env-inside"></div>
+                <div class="letter" id="letter">
+                  <div class="letter-fallback" aria-hidden="true">
+                    <i></i><i></i><i style="width:80%"></i><i></i><i style="width:65%"></i><i></i><i style="width:90%"></i><i></i><i style="width:70%"></i>
+                  </div>
+                </div>
+                <div class="env-front" id="envFront">
+                  <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M0 100 L50 46 L100 100 M0 0 L44 52 M100 0 L56 52" />
+                  </svg>
+                  <div class="env-address">to: whoever is curious<br />from: juan arturo</div>
+                </div>
+                <div class="env-strip" id="envStrip">✂ - - - - - tear here - - - - -</div>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
-      <a href="https://github.com/Jarturog" target="_blank">💻 GitHub</a>
-      <a href="https://linkedin.com/in/j-arturo-a-c" target="_blank">🔗 LinkedIn</a>
     </div>
-  </div>
-  <div class="pdf-container">
-    <embed src="assets/cv.pdf" type="application/pdf" />
+    <p class="hint">tap the postcard</p>
+
+    <section aria-labelledby="links-title">
+      <h2 class="links-title reveal" id="links-title">find me elsewhere</h2>
+      <div class="stamps stamps-shadow reveal">
+        <a class="stamp-link" href="https://github.com/Jarturog" target="_blank" rel="noopener">
+          <span class="frame"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.540 2.290 6.530 5.470 7.590.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.490-2.010.37-2.530-.49-2.690-.94-.09-.23-.48-.94-.82-1.130-.28-.15-.68-.52-.01-.53.63-.01 1.080.58 1.230.82.72 1.210 1.870.87 2.330.66.07-.52.28-.87.51-1.070-1.780-.2-3.640-.89-3.640-3.950 0-.87.31-1.590.82-2.150-.08-.2-.36-1.020.08-2.120 0 0 .67-.21 2.200.82.64-.18 1.320-.27 2-.27.68 0 1.360.09 2 .27 1.530-1.040 2.200-.82 2.200-.82.44 1.100.16 1.920.08 2.120.51.56.82 1.270.82 2.150 0 3.070-1.870 3.750-3.650 3.950.29.25.54.73.54 1.480 0 1.070-.01 1.930-.01 2.200 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.420-3.580-8-8-8z"/></svg></span>
+          github
+        </a>
+        <a class="stamp-link" href="https://linkedin.com/in/j-arturo-a-c" target="_blank" rel="noopener">
+          <span class="frame"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.220-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.540 5.540 0 01.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg></span>
+          linkedin
+        </a>
+        <a class="stamp-link" href="assets/cv.pdf" target="_blank" rel="noopener">
+          <span class="frame"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5 1.5V5h3.5L9 1.5zM4.5 8a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7zm0 2.5a.5.5 0 0 0 0 1h4a.5.5 0 0 0 0-1h-4z"/></svg></span>
+          cv (pdf)
+        </a>
+      </div>
+
+      <ul class="papers reveal" aria-label="Papers and theses">
+        <li><a href="assets/backdoor-review.pdf" target="_blank" rel="noopener"><span>Backdoor Detection &amp; Mitigation in Neural Networks</span><span class="kind">survey</span></a></li>
+        <li><a href="assets/snn-survey.pdf" target="_blank" rel="noopener"><span>Spiking Neural Networks: A Comprehensive Literature Review</span><span class="kind">survey</span></a></li>
+        <li><a href="assets/master-thesis.pdf" target="_blank" rel="noopener"><span>Master Thesis</span><span class="kind">thesis</span></a></li>
+        <li><a href="assets/bachelor-thesis.pdf" target="_blank" rel="noopener"><span>Bachelor Thesis</span><span class="kind">thesis</span></a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>Juan Arturo Abaurrea Calafell <span id="updated"></span></footer>
+
+  <!-- The CV, once it's out of the envelope -->
+  <div class="reader" id="reader" role="dialog" aria-modal="true" aria-label="My CV" hidden>
+    <div class="reader-bar">
+      <span class="title">curriculum vitae <small id="updated2"></small></span>
+      <a href="assets/cv.pdf" download>download</a>
+      <a href="assets/cv.pdf" target="_blank" rel="noopener">open pdf</a>
+      <button type="button" id="closeReader" aria-label="Close">✕ close</button>
+    </div>
+    <div class="reader-scroll" id="readerScroll">
+      <div class="pages" id="pages"><div class="page placeholder">unfolding…</div></div>
+    </div>
   </div>
 
   <script>
-    async function getLastModified() {
+    const CV = 'assets/cv.pdf';
+    const PDFJS = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/';
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const wait = ms => new Promise(r => setTimeout(r, reduceMotion ? 0 : ms));
+    const $ = id => document.getElementById(id);
+
+    const stage = $('stage'), card = $('postcard'), envelope = $('envelope'), letter = $('letter');
+    const reader = $('reader'), pages = $('pages'), readerScroll = $('readerScroll');
+
+    // ---------- Title types itself ----------
+    (async () => {
+      const text = 'i also like other stuff', el = $('typed');
+      if (reduceMotion) { el.textContent = text; return; }
+      await wait(400);
+      for (const ch of text) {
+        el.textContent += ch;
+        await wait(ch === ' ' ? 120 : 55 + Math.random() * 70);
+      }
+    })();
+
+    // ---------- Stars for the night sky ----------
+    (() => {
+      const g = document.querySelector('.scene .stars');
+      let seed = 7;
+      const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+      for (let i = 0; i < 60; i++) {
+        const c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+        c.setAttribute('cx', (rnd() * 600).toFixed(1));
+        c.setAttribute('cy', (rnd() * 230).toFixed(1));
+        c.setAttribute('r', (0.5 + rnd() * 1.2).toFixed(2));
+        if (i % 4 === 0) { c.classList.add('tw'); c.style.animationDelay = (rnd() * 3).toFixed(2) + 's'; }
+        g.append(c);
+      }
+    })();
+
+    // ---------- Torn edge between the strip and the envelope ----------
+    (() => {
+      const n = 24, d = 8, pts = [];
+      for (let i = 0; i <= n; i++) pts.push([(i / n * 100).toFixed(2) + '%', i % 2 === 0]);
+      $('envStrip').style.clipPath =
+        'polygon(0 0, 100% 0, ' + pts.slice().reverse().map(([x, down]) => `${x} calc(100% - ${down ? 0 : d}px)`).join(', ') + ')';
+      $('envFront').style.clipPath =
+        'polygon(' + pts.map(([x, down]) => `${x} ${down ? d : 0}px`).join(', ') + ', 100% 100%, 0 100%)';
+    })();
+
+    // ---------- Postcard follows the mouse a little ----------
+    if (!reduceMotion && matchMedia('(hover: hover)').matches) {
+      stage.addEventListener('pointermove', e => {
+        if (card.classList.contains('flipped')) return;
+        const r = stage.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width * 2 - 1, y = (e.clientY - r.top) / r.height * 2 - 1;
+        card.style.setProperty('--ry', (x * 7).toFixed(2) + 'deg');
+        card.style.setProperty('--rx', (-y * 6).toFixed(2) + 'deg');
+        card.style.setProperty('--px', x.toFixed(3));
+        card.style.setProperty('--py', y.toFixed(3));
+      });
+      stage.addEventListener('pointerleave', resetTilt);
+    }
+    function resetTilt() { ['--rx', '--ry', '--px', '--py'].forEach(p => card.style.removeProperty(p)); }
+
+    // ---------- Links fade in on scroll ----------
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('seen'); io.unobserve(e.target); }
+    }), { threshold: 0.2 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+    // ---------- PDF rendering (pdf.js) ----------
+    let pdfPromise;
+    function loadScript(src) {
+      return new Promise((res, rej) => {
+        const s = document.createElement('script');
+        s.src = src; s.onload = res; s.onerror = rej;
+        document.head.append(s);
+      });
+    }
+    function getPdf() {
+      return pdfPromise ??= loadScript(PDFJS + 'pdf.min.js').then(() => {
+        pdfjsLib.GlobalWorkerOptions.workerSrc = PDFJS + 'pdf.worker.min.js';
+        return pdfjsLib.getDocument(CV).promise;
+      });
+    }
+    async function renderPage(pdf, n, cssWidth) {
+      const page = await pdf.getPage(n);
+      const base = page.getViewport({ scale: 1 });
+      const viewport = page.getViewport({ scale: cssWidth * (window.devicePixelRatio || 1) / base.width });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.round(viewport.width);
+      canvas.height = Math.round(viewport.height);
+      await page.render({ canvasContext: canvas.getContext('2d'), viewport }).promise;
+      return canvas;
+    }
+
+    // First page of the CV becomes the letter inside the envelope
+    setTimeout(async () => {
+      try { letter.replaceChildren(await renderPage(await getPdf(), 1, letter.clientWidth || 300)); } catch {}
+    }, 1200);
+
+    let pagesState = 'none';
+    async function renderAllPages() {
+      if (pagesState !== 'none') return;
+      pagesState = 'loading';
       try {
-        const response = await fetch('assets/cv.pdf', { method: 'HEAD' });
-        const lastModified = response.headers.get('Last-Modified');
-        
-        if (lastModified) {
-          const date = new Date(lastModified);
-          const formatted = date.toLocaleDateString('en-US', { 
-            year: 'numeric', 
-            month: 'long'
-          });
-          document.getElementById('lastModified').textContent = `(Updated: ${formatted})`;
-        } else {
-          document.getElementById('lastModified').textContent = '';
+        const pdf = await getPdf();
+        const width = Math.min(pages.clientWidth || 860, 860);
+        const out = [];
+        for (let i = 1; i <= pdf.numPages; i++) {
+          const div = document.createElement('div');
+          div.className = 'page';
+          div.append(await renderPage(pdf, i, width));
+          out.push(div);
         }
-      } catch (error) {
-        console.error('Error fetching last modified date:', error);
-        document.getElementById('lastModified').textContent = '';
+        pages.replaceChildren(...out);
+        pagesState = 'done';
+      } catch {
+        const div = document.createElement('div');
+        div.className = 'page fallback';
+        div.innerHTML = `<iframe src="${CV}" title="CV"></iframe><a href="${CV}" target="_blank" rel="noopener">Open the CV as a PDF</a>`;
+        pages.replaceChildren(div);
+        pagesState = 'none';
       }
     }
 
-    getLastModified();
+    // ---------- Open: flip → tear → pull out → read ----------
+    let busy = false, isOpen = false;
+
+    async function openLetter() {
+      if (busy || isOpen) return;
+      busy = true;
+      renderAllPages();
+      resetTilt();
+      stage.classList.add('opened');
+      card.classList.add('flipped');
+      await wait(850);
+      envelope.classList.add('shake');
+      await wait(260);
+      envelope.classList.add('torn');
+      await wait(450);
+      envelope.classList.add('out');
+      await wait(900);
+      showReader(letter.getBoundingClientRect());
+      isOpen = true; busy = false;
+    }
+
+    function showReader(fromRect) {
+      reader.hidden = false;
+      document.body.classList.add('locked');
+      readerScroll.scrollTop = 0;
+      const first = pages.firstElementChild;
+      if (fromRect && first && !reduceMotion) {
+        // the letter grows from where it is into the first page
+        const to = first.getBoundingClientRect();
+        first.style.transition = 'none';
+        first.style.transformOrigin = '0 0';
+        first.style.transform = `translate(${fromRect.left - to.left}px, ${fromRect.top - to.top}px) scale(${fromRect.width / to.width})`;
+        first.getBoundingClientRect();
+        first.style.transition = '';
+        first.style.transform = '';
+      }
+      requestAnimationFrame(() => reader.classList.add('in'));
+      $('closeReader').focus({ preventScroll: true });
+    }
+
+    async function closeLetter() {
+      if (!isOpen || busy) return;
+      busy = true;
+      reader.classList.remove('in');
+      await wait(300);
+      reader.hidden = true;
+      document.body.classList.remove('locked');
+      if (card.classList.contains('flipped')) {
+        envelope.classList.remove('out');
+        await wait(600);
+        envelope.classList.remove('torn', 'shake');
+        card.classList.remove('flipped');
+        await wait(850);
+        stage.classList.remove('opened');
+      }
+      isOpen = false; busy = false;
+      card.focus({ preventScroll: true });
+    }
+
+    card.addEventListener('click', openLetter);
+    card.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openLetter(); }
+    });
+    $('closeReader').addEventListener('click', closeLetter);
+    readerScroll.addEventListener('click', e => { if (e.target === readerScroll || e.target === pages) closeLetter(); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLetter(); });
+
+    // Corner button: play the animation if the postcard is on screen, otherwise open straight away
+    document.querySelector('.cv-fab').addEventListener('click', () => {
+      if (busy || isOpen) return;
+      const r = stage.getBoundingClientRect();
+      if (r.top >= 0 && r.bottom <= innerHeight) return openLetter();
+      renderAllPages();
+      showReader(null);
+      isOpen = true;
+    });
+
+    // ---------- "Updated" date from the PDF ----------
+    fetch(CV, { method: 'HEAD' }).then(r => {
+      const lm = r.headers.get('Last-Modified');
+      if (!lm) return;
+      const t = '· updated ' + new Date(lm).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+      $('updated').textContent = t;
+      $('updated2').textContent = t;
+    }).catch(() => {});
   </script>
 </body>
 </html>
