@@ -280,12 +280,12 @@ function switchThemeFrom(x, y) {
   }
   // a bit past the farthest corner, so the edge leaves the screen still moving instead of stopping at it
   const radius = 1.25 * Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y));
-  document.startViewTransition(() => applyTheme(theme, true)).ready.then(() => {
-    document.documentElement.animate(
-      { clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
-      { duration: 1100, easing: 'cubic-bezier(.35, 0, .3, 1)', pseudoElement: '::view-transition-new(root)' }
-    );
-  });
+  // the circle itself is a CSS animation (css/style.css), so the new theme is clipped from its very first frame
+  const style = document.documentElement.style;
+  style.setProperty('--reveal-x', x + 'px');
+  style.setProperty('--reveal-y', y + 'px');
+  style.setProperty('--reveal-r', radius + 'px');
+  document.startViewTransition(() => applyTheme(theme, true));
 }
 
 document.addEventListener('click', e => { if (inMargin(e)) switchThemeFrom(e.clientX, e.clientY); });

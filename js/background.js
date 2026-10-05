@@ -8,7 +8,8 @@
   const SCROLL_PULL = -0.3;            // scrolling moves the background with the page, at a third of its speed (parallax)
   const COLUMN = 330;                  // keep the drawing out of the main column (half-width, px)
   const RING_SPEED = .16;              // contour spacings per second: rings grow out of the peaks
-  const CURSOR_RADIUS = 120, CURSOR_PUSH = 45;   // how far and how hard the cursor pushes things away
+  const CURSOR_RADIUS = 120;           // how far the cursor reaches: it pushes stars away and magnifies the map
+  const LENS = .45;                    // how much the map swells under the cursor (below 1, so lines never fold)
   const GAP = 120, LINK = 190;         // a gap wider than GAP gets a new star; stars link up within LINK
 
   let W = 0, H = 0, starRGB = '238, 241, 255', lineRGB = '150, 170, 235', topoRGB = '120, 95, 60';
@@ -88,15 +89,15 @@
   let down = 0, out = 0, rings = 0, grid = new Float32Array(0);
   function sampleSide(x0, cols, rows, side) {
     if (grid.length < cols * rows) grid = new Float32Array(cols * rows);
-    const r2 = CURSOR_RADIUS * CURSOR_RADIUS, push = CURSOR_PUSH * pointer.on;
+    const r2 = CURSOR_RADIUS * CURSOR_RADIUS, lens = LENS * pointer.on;
     let min = Infinity, max = -Infinity;
     for (let r = 0; r < rows; r++) for (let c = 0; c < cols; c++) {
       let px = x0 + c * CELL, py = r * CELL;
-      if (push > .5) {   // the cursor pushes the terrain away from itself
+      if (lens > .01) {   // a soft magnifying glass: the terrain swells under the cursor and eases back around it
         const dx = px - pointer.x, dy = py - pointer.y, d2 = dx * dx + dy * dy;
         if (d2 < 9 * r2) {
-          const f = push * Math.exp(-d2 / r2) / Math.sqrt(d2 + 1);
-          px -= dx * f; py -= dy * f;
+          const s = 1 - lens * Math.exp(-d2 / r2);
+          px = pointer.x + dx * s; py = pointer.y + dy * s;
         }
       }
       const v = side < 0 ? heightAt(px + out, py - down) : heightAt(px - out + 560, py - down + 430);
