@@ -1,0 +1,213 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Arturo PhD Calendar//ES
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Arturo - ELLIS
+X-WR-TIMEZONE:Europe/Madrid
+BEGIN:VEVENT
+UID:ellis_phd_central_2026@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261031
+DTEND;VALUE=DATE:20261101
+SUMMARY:DEADLINE ELLIS PhD Program: central recruiting
+LOCATION:Online (portal ELLIS)
+DESCRIPTION:Cierre 31/10/2026 23:59 AoE\; referencias hasta 25/11/2026. Un 
+ doctorando que ya trabaja con un advisor ELLIS puede entrar por aqui solo 
+ si esta en sus primeros 6 meses de doctorado Y su advisor participa en la 
+ ronda de este ano. Si no\, existe la via de Nomination\, abierta todo el a
+ no. Requisitos: co-supervisor en otro pais europeo e intercambio de 6+ mes
+ es. Bielefeld es fundadora de la ELLIS Unit NRW (aprobada 21/05/2026) y Ba
+ rbara Hammer es ELLIS Member y co-directora de la unit. https://ellis.eu/r
+ esearch/phd-postdoc/phd-postdoc-faq
+CATEGORIES:ELLIS,PhD,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_nrw_climate_reg@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261104
+SUMMARY:DEADLINE registro online workshop ELLIS Unit NRW (clima)
+LOCATION:Online
+DESCRIPTION:Registro online hasta 03/11/2026 (presencial cerro el 20/10/202
+ 6). https://indico3-jsc.fz-juelich.de/event/335/
+CATEGORIES:ELLIS,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_nrw_climate@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261106
+DTEND;VALUE=DATE:20261107
+SUMMARY:ELLIS Unit NRW workshop: How Resolution Matters (IA y clima)
+LOCATION:InnoDom Cologne (hibrido)
+DESCRIPTION:DEADLINES: registro presencial cerrado (20/10/2026)\; online ha
+ sta 03/11/2026.\nWorkshop de tu propia ELLIS unit\; el tema (modelado clim
+ atico) no es el tuyo\, pero sirve para conocer a la gente de la unit. Biel
+ efeld es fundadora de la ELLIS Unit NRW (aprobada 21/05/2026) y Barbara Ha
+ mmer es ELLIS Member y co-directora de la unit. https://ellis.eu/events/el
+ lis-unit-nrw-how-resolution-matters-the-future-of-ai-climate-modelling
+CATEGORIES:ELLIS,PhD,Networking
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_phd_refs_2026@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261125
+DTEND;VALUE=DATE:20261126
+SUMMARY:DEADLINE ELLIS PhD Program: cartas de referencia
+LOCATION:Online
+DESCRIPTION:Ultimo dia para que lleguen las referencias de la solicitud cen
+ tral 2026. https://ellis.eu/news/ellis-phd-program-call-for-applications-2
+ 026
+CATEGORIES:ELLIS,PhD,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_unconf_2026@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:ELLIS UnConference 2026
+LOCATION:Palais des Congres\, Paris
+DESCRIPTION:DEADLINES: propuestas de sesion cerradas (15/09/2026)\; registr
+ o y posters en un solo formulario (ya inscrito).\nSatelite europeo de Neur
+ IPS: keynote\, 20 sesiones paralelas y poster session (16:30 a 18:30\, pap
+ ers 2026 de venues top\, excepto NeurIPS 2026\; poster A1 vertical\, lo im
+ prime cada uno). https://ellis-unconference.github.io/
+CATEGORIES:ELLIS,PhD,Networking
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:elias_ws2027_early@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261215
+DTEND;VALUE=DATE:20261216
+SUMMARY:DEADLINE ELIAS-ELLIS Winter School 2027: early bird
+LOCATION:Online
+DESCRIPTION:Inscripcion early bird 550 EUR hasta 15/12/2026\; tarde 650 EUR
+  hasta 04/01/2027\; virtual 200 EUR hasta 24/01/2027. Plazas para ELLIS Ph
+ D students\, postdocs y Fellows/Scholars/Members\; plazas limitadas para o
+ tros: preguntar si un doctorando de un ELLIS Member entra. https://elias-a
+ i.eu/event/eliasws2027/
+CATEGORIES:ELLIS,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:elias_ws2027_late@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270104
+DTEND;VALUE=DATE:20270105
+SUMMARY:DEADLINE ELIAS-ELLIS Winter School 2027: inscripcion tardia
+LOCATION:Online
+DESCRIPTION:Ultimo dia de inscripcion presencial (650 EUR). Virtual hasta 2
+ 4/01/2027 (200 EUR). https://elias-ai.eu/event/eliasws2027/
+CATEGORIES:ELLIS,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_schools_sched_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:Revisar calendario anual de ELLIS Winter/Summer Schools
+LOCATION:Online
+DESCRIPTION:ELLIS publica a mediados de enero la lista de escuelas del ano 
+ (2026: 10 escuelas de marzo a septiembre\, publicada el 15/01/2026). Cada 
+ escuela tiene su propio plazo y cuota: apuntar las que interesen. https://
+ ellis.eu/research/phd-postdoc
+CATEGORIES:ELLIS,PhD
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:elias_ws2027@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270125
+DTEND;VALUE=DATE:20270130
+SUMMARY:ELIAS-ELLIS Winter School 2027
+LOCATION:NOBIS / NOI Techpark\, Brunico (Tirol del Sur)\, Italia
+DESCRIPTION:DEADLINES: early bird 15/12/2026 (550 EUR)\, tardia 04/01/2027 
+ (650 EUR)\, virtual 24/01/2027 (200 EUR).\nTema: aprendizaje multimodal (f
+ oundation models\, IA fisica y robotica\, sostenibilidad). Keynotes\, tuto
+ riales\, hands-on\, posters de doctorandos y networking con industria. htt
+ ps://elias-ai.eu/event/eliasws2027/
+CATEGORIES:ELLIS,PhD,WinterSchool
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_eds_reg_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270426
+DTEND;VALUE=DATE:20270427
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE ELLIS Doctoral Symposium: 1a ronda de registro (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 la primera ronda cerro el 26/04. La primera ronda es pa
+ ra ELLIS PhD students/postdocs y doctorandos de ELLIS Fellows\, Scholars o
+  Members (tu caso)\; los demas solo en segunda ronda. Hay mobility grants 
+ para viaje y alojamiento. Fecha estimada por el patron anual\; confirmar e
+ n ellis.eu cada ano.
+CATEGORIES:ELLIS,PhD,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_eds_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270726
+DTEND;VALUE=DATE:20270730
+RRULE:FREQ=YEARLY;BYMONTH=7;BYDAY=4MO;UNTIL=20301231
+SUMMARY:ELLIS Doctoral Symposium (TENTATIVO)
+LOCATION:Sede rotativa (Europa)
+DESCRIPTION:DEADLINES: 1a ronda de registro ~26/04\; mobility grants dispon
+ ibles.\nEl gran encuentro anual de doctorandos ELLIS (~200 plazas\; 2026 e
+ n Lisboa del 27/07 al 30/07\, tema Trustworthy AI). Abierto a doctorandos 
+ de ELLIS Members como Barbara Hammer. Fecha estimada por el patron anual\;
+  confirmar en ellis.eu cada ano.
+CATEGORIES:ELLIS,PhD,Networking
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_unconf_sessions_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270915
+DTEND;VALUE=DATE:20270916
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE ELLIS UnConference: propuestas de sesion (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 las propuestas de sesion (tutoriales\, mini-workshops\,
+  debates) cerraban el 15/09. Proponer una sesion es la mejor forma de hace
+ rse visible en ELLIS. Fecha estimada por el patron anual\; confirmar en el
+ lis.eu cada ano.
+CATEGORIES:ELLIS,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ellis_unconf_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271214
+DTEND;VALUE=DATE:20271215
+RRULE:FREQ=YEARLY;BYMONTH=12;BYDAY=2TU;UNTIL=20301231
+SUMMARY:ELLIS UnConference (TENTATIVO)
+LOCATION:Sede del satelite europeo de NeurIPS (cambia cada ano)
+DESCRIPTION:DEADLINES: propuestas de sesion ~15/09\; registro y posters des
+ pues (un solo formulario).\nEvento anual de la comunidad ELLIS junto al sa
+ telite europeo de NeurIPS/EurIPS (2025 Copenhague\, 2026 Paris). Fecha est
+ imada por el patron anual\; confirmar en ellis.eu cada ano.
+CATEGORIES:ELLIS,PhD,Networking
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR

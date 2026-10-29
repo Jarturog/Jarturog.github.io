@@ -317,34 +317,6 @@ STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ellis_doctoral_symp_2027@arturo-phd-calendar
-DTSTAMP:20260801T120000Z
-DTSTART;VALUE=DATE:20270705
-DTEND;VALUE=DATE:20270710
-SUMMARY:ELLIS Doctoral Symposium 2027 (TENTATIVO)
-LOCATION:Sede rotativa (Europa)
-DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro anuncio oficial de fech
- a/sede 2027 en ellis.eu. Se mantiene la estimacion original (patron de ve
- rano). Confirmar en ellis.eu.
-CATEGORIES:AI,PhD,Networking
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:ellis_summer_munich_2027@arturo-phd-calendar
-DTSTAMP:20260801T120000Z
-DTSTART;VALUE=DATE:20270802
-DTEND;VALUE=DATE:20270807
-SUMMARY:ELLIS Summer School Munich 2027 (TENTATIVO)
-LOCATION:Munich, Alemania
-DESCRIPTION:VERIFICADO 01-ago-2026: no se encontro anuncio oficial de fech
- a 2027 en ellis.eu. Se mantiene la estimacion original. Confirmar en elli
- s.eu.
-CATEGORIES:AI,SummerSchool
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
 UID:lxmls2027@arturo-phd-calendar
 DTSTAMP:20260801T120000Z
 DTSTART;VALUE=DATE:20270719
