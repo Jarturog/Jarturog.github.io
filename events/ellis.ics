@@ -179,6 +179,23 @@ STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
+UID:mlss_open_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270801
+DTEND;VALUE=DATE:20270802
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:MLSS: abren solicitudes de la proxima edicion (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:Machine Learning Summer School: 2 semanas\, cambia de sede cada
+  ano (2026 Tubinga\, 2027 Okinawa). Para la edicion 2027 la solicitud abri
+ o el 01/08/2026\, prioridad hasta 30/09 y cierre 10/10 (OpenReview\, sin t
+ asa de solicitud\; ~333 EUR de registro si te aceptan). Mirar tambien otra
+ s ediciones del ano. https://github.com/awesome-mlss/awesome-mlss
+CATEGORIES:PhD,SummerSchool
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
 UID:ellis_unconf_sessions_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270915
@@ -191,6 +208,21 @@ DESCRIPTION:En 2026 las propuestas de sesion (tutoriales\, mini-workshops\,
  rse visible en ELLIS. Fecha estimada por el patron anual\; confirmar en el
  lis.eu cada ano.
 CATEGORIES:ELLIS,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:mlss_deadline_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270930
+DTEND;VALUE=DATE:20271001
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE MLSS: solicitud prioritaria (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En la edicion 2027 (Okinawa) la prioridad era hasta el 30/09 y 
+ el cierre final el 10/10\; respuestas el 01/11. Las fechas cambian segun l
+ a sede.
+CATEGORIES:PhD,SummerSchool,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT

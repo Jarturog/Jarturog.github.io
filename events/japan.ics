@@ -1,0 +1,152 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Arturo PhD Calendar//ES
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Arturo - Japon
+X-WR-TIMEZONE:Europe/Madrid
+BEGIN:VEVENT
+UID:jsps_pe_host_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20261128
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:Buscar host en Japon para JSPS Short-term (antes de la ronda de ene
+ ro)
+LOCATION:Online
+DESCRIPTION:La 2a ronda cierra en JSPS a principios de enero y el plazo int
+ erno del host suele ser a principios de diciembre: escribir ya a los grupo
+ s (p. ej. RIKEN AIP\, NII\, Univ. de Tokio\, Kioto\, OIST). Beca JSPS Post
+ doctoral Fellowship for Research in Japan (Short-term\, PE)\, que incluye 
+ pre-doctorales: estancia de 1 a 12 meses en un grupo japones\, para doctor
+ andos de universidades de la UE (tambien EEUU\, Canada\, UK\, Suiza\, Noru
+ ega). La solicitud la presenta el HOST japones a JSPS\, y su institucion s
+ uele tener un plazo interno 4 a 6 semanas antes: hay que tener host y prop
+ uesta mucho antes. ~20 becas por ronda. https://www.jsps.go.jp/english/e-o
+ ubei-s/appliguidelines.html
+CATEGORIES:Japan,Fellowship
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:jsps_pe_r2_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270108
+DTEND;VALUE=DATE:20270109
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE JSPS Short-term (2a ronda\, recepcion en JSPS)
+LOCATION:Online
+DESCRIPTION:FY2027: recepcion en JSPS el 08/01/2027 17:00 JST\; resultados 
+ a mediados de mayo\; inicio desde el 01/08/2027. Beca JSPS Postdoctoral Fe
+ llowship for Research in Japan (Short-term\, PE)\, que incluye pre-doctora
+ les: estancia de 1 a 12 meses en un grupo japones\, para doctorandos de un
+ iversidades de la UE (tambien EEUU\, Canada\, UK\, Suiza\, Noruega). La so
+ licitud la presenta el HOST japones a JSPS\, y su institucion suele tener 
+ un plazo interno 4 a 6 semanas antes: hay que tener host y propuesta mucho
+  antes. ~20 becas por ronda. https://www.jsps.go.jp/english/e-oubei-s/appl
+ iguidelines.html
+CATEGORIES:Japan,Fellowship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:nii_call1_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270409
+DTEND;VALUE=DATE:20270410
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE NII International Internship\, 1a convocatoria (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 la 1a convocatoria cerraba el 10/04 (17:00 JST) para es
+ tancias hasta marzo del ano siguiente. Fecha estimada por el patron anual\
+ ; confirmar cada ano. NII International Internship Program (Tokio): 2 a 5\
+ ,5 meses con un investigador del NII\, 5.700 JPY/dia de manutencion. Solo 
+ para doctorandos de universidades con MOU con el NII: comprobar con la ofi
+ cina internacional de Bielefeld si lo hay. Se solicita a traves de la univ
+ ersidad\, que puede fijar un plazo interno antes. https://www.nii.ac.jp/en
+ /about/international/mouresearch/
+CATEGORIES:Japan,Internship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:pfn_intern_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270418
+DTEND;VALUE=DATE:20270419
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE Preferred Networks: summer internship (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 el plazo fue el 19/04\; prueba tecnica\, entrevistas de
+  mayo a junio y practicas de agosto a mediados de septiembre en Tokio\, 2.
+ 500 JPY/hora\, un viaje de ida y vuelta y alojamiento para quien viene de 
+ fuera. Ojo: piden derecho legal a trabajar en Japon (visado) y que sea en 
+ vacaciones de tu universidad\; compatibilidad con el contrato MSCA por con
+ firmar. Fecha estimada por el patron anual\; confirmar cada ano. https://w
+ ww.preferred.jp/en/careers/internship
+CATEGORIES:Japan,Internship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:jsps_pe_r3_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270604
+DTEND;VALUE=DATE:20270605
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE JSPS Short-term (3a ronda\, recepcion en JSPS)
+LOCATION:Online
+DESCRIPTION:FY2027: recepcion en JSPS el 04/06/2027 17:00 JST\; resultados 
+ a finales de septiembre\; inicio desde el 01/12/2027. Beca JSPS Postdoctor
+ al Fellowship for Research in Japan (Short-term\, PE)\, que incluye pre-do
+ ctorales: estancia de 1 a 12 meses en un grupo japones\, para doctorandos 
+ de universidades de la UE (tambien EEUU\, Canada\, UK\, Suiza\, Noruega). 
+ La solicitud la presenta el HOST japones a JSPS\, y su institucion suele t
+ ener un plazo interno 4 a 6 semanas antes: hay que tener host y propuesta 
+ mucho antes. ~20 becas por ronda. https://www.jsps.go.jp/english/e-oubei-s
+ /appliguidelines.html
+CATEGORIES:Japan,Fellowship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:jsps_pe_r1_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270924
+DTEND;VALUE=DATE:20270925
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE JSPS Short-term (1a ronda\, recepcion en JSPS) (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:Para FY2027 fue el 25/09/2026 17:00 JST (resultados a principio
+ s de enero\, inicio desde abril). Fecha estimada por el patron anual\; con
+ firmar cada ano. Beca JSPS Postdoctoral Fellowship for Research in Japan (
+ Short-term\, PE)\, que incluye pre-doctorales: estancia de 1 a 12 meses en
+  un grupo japones\, para doctorandos de universidades de la UE (tambien EE
+ UU\, Canada\, UK\, Suiza\, Noruega). La solicitud la presenta el HOST japo
+ nes a JSPS\, y su institucion suele tener un plazo interno 4 a 6 semanas a
+ ntes: hay que tener host y propuesta mucho antes. ~20 becas por ronda. htt
+ ps://www.jsps.go.jp/english/e-oubei-s/appliguidelines.html
+CATEGORIES:Japan,Fellowship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:nii_call2_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271015
+DTEND;VALUE=DATE:20271016
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE NII International Internship\, 2a convocatoria (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:La 2a convocatoria cierra en octubre (plazo interno de TU Wien 
+ 2026: 16/10) para estancias desde marzo del ano siguiente. Fecha estimada 
+ por el patron anual\; confirmar cada ano. NII International Internship Pro
+ gram (Tokio): 2 a 5\,5 meses con un investigador del NII\, 5.700 JPY/dia d
+ e manutencion. Solo para doctorandos de universidades con MOU con el NII: 
+ comprobar con la oficina internacional de Bielefeld si lo hay. Se solicita
+  a traves de la universidad\, que puede fijar un plazo interno antes. http
+ s://www.nii.ac.jp/en/about/international/mouresearch/
+CATEGORIES:Japan,Internship,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
