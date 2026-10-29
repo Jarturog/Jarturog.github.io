@@ -27,6 +27,8 @@
     --c-industry-bg:#E9E4F1;
     --c-deadline:#A23E48;
     --c-deadline-bg:#F0DEE0;
+    --c-hack:#2F6FD6;
+    --c-hack-bg:#DCE7FA;
     --c-otros:#3B8C82;
     --c-otros-bg:#DFEDEB;
     --radius:3px;
@@ -443,18 +445,21 @@
   .cat-schools{ background:var(--c-schools-bg); color:#1e3722; }
   .cat-industry{ background:var(--c-industry-bg); color:#312647; }
   .cat-deadline{ background:var(--c-deadline-bg); color:#4a1a1f; }
+  .cat-hack{ background:var(--c-hack-bg); color:#13305e; }
   .cat-otros{ background:var(--c-otros-bg); color:#153b37; }
   .dot.cat-research{ background:var(--c-research); }
   .dot.cat-startups{ background:var(--c-startups); }
   .dot.cat-schools{ background:var(--c-schools); }
   .dot.cat-industry{ background:var(--c-industry); }
   .dot.cat-deadline{ background:var(--c-deadline); }
+  .dot.cat-hack{ background:var(--c-hack); }
   .dot.cat-otros{ background:var(--c-otros); }
   .allday-event.cat-research{ border-left:3px solid var(--c-research); }
   .allday-event.cat-startups{ border-left:3px solid var(--c-startups); }
   .allday-event.cat-schools{ border-left:3px solid var(--c-schools); }
   .allday-event.cat-industry{ border-left:3px solid var(--c-industry); }
   .allday-event.cat-deadline{ border-left:3px solid var(--c-deadline); }
+  .allday-event.cat-hack{ border-left:3px solid var(--c-hack); }
   .allday-event.cat-otros{ border-left:3px solid var(--c-otros); }
 
   .tentative-mark{ opacity:.72; font-style:italic; }
@@ -537,6 +542,7 @@
       <span class="legend__item"><span class="dot cat-schools"></span>PhD / Escuelas</span>
       <span class="legend__item"><span class="dot cat-industry"></span>Industria / Labs</span>
       <span class="legend__item"><span class="dot cat-deadline"></span>Deadlines</span>
+      <span class="legend__item"><span class="dot cat-hack"></span>Hackathons / Competiciones</span>
       <span class="legend__item"><span class="dot cat-otros"></span>Otros</span>
     </div>
   </div>
@@ -683,8 +689,9 @@
   function colorClass(categories){
     const c = (categories||'').toLowerCase();
     if(c.includes('deadline')) return 'cat-deadline';
+    if(c.includes('hackathon')||c.includes('competition')||c.includes('datathon')) return 'cat-hack';
     if(c.includes('industry')) return 'cat-industry';
-    if(c.includes('startups')||c.includes('vc')||c.includes('networking')||c.includes('hackathon')||c.includes('deeptech')) return 'cat-startups';
+    if(c.includes('startups')||c.includes('vc')||c.includes('networking')||c.includes('deeptech')) return 'cat-startups';
     if(c.includes('phd')||c.includes('summerschool')||c.includes('winterschool')||c.includes('healthtech')) return 'cat-schools';
     if(c.includes('conference')||c.includes('ai')||c.includes('nlp')||c.includes('cv')||c.includes('datamining')||c.includes('science')) return 'cat-research';
     return 'cat-otros';
@@ -969,6 +976,7 @@
       'cat-schools':'PhD / Escuela',
       'cat-industry':'Industria / Labs',
       'cat-deadline':'Deadline',
+      'cat-hack':'Hackathon / Competición',
       'cat-otros':'Otros'
     }[cls] || 'Otros';
   }
