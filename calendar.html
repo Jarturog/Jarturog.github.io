@@ -1170,9 +1170,8 @@
     const names = await discoverEventFiles();
     for(const name of names){
       const key = EVENTS_DIR + name;
-      if(files[key]) continue; // already loaded (e.g. from storage)
       const text = await fetchText(EVENTS_DIR + name);
-      if(text) addFile(key, text);
+      if(text && files[key] !== text) addFile(key, text); // new or updated since last visit
     }
     if(!names.length){
       // fallback: single eventos.ics at site root, for simple setups

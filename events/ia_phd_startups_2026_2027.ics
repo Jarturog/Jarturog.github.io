@@ -272,17 +272,16 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:amld2027@arturo-phd-calendar
-DTSTAMP:20260801T120000Z
-DTSTART;VALUE=DATE:20270209
-DTEND;VALUE=DATE:20270212
-SUMMARY:AMLD - Applied Machine Learning Days EPFL (TENTATIVO)
-LOCATION:Lausana, Suiza
-DESCRIPTION:VERIFICADO 01-ago-2026: sin fecha oficial de 2027 anunciada au
- n en appliedmldays.org. Estimacion ajustada al patron reciente: AMLD 2026
-  se celebro 10-12 feb 2026 (antes: 2025 fue 11-14 feb). Confirmar en appl
- iedmldays.org.
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270309
+DTEND;VALUE=DATE:20270312
+SUMMARY:AMLD Intelligence Summit 2027 (Applied Machine Learning Days EPFL)
+LOCATION:SwissTech Convention Center\, EPFL\, Lausana\, Suiza
+DESCRIPTION:VERIFICADO 29/10/2026 en appliedmldays.org: 09/03/2027 a 11/0
+ 3/2027 en el SwissTech Convention Center. Calls abiertas (workshops\, pos
+ ters\, tracks) sin plazo publicado: ver appliedmldays.org.
 CATEGORIES:AI,Conference
-STATUS:TENTATIVE
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
