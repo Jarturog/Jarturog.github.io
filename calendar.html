@@ -595,6 +595,46 @@
   }
   function addDays(d,n){ const r=new Date(d); r.setDate(r.getDate()+n); return r; }
 
+  // Expands RRULE:FREQ=YEARLY into one event per year. Supports UNTIL, COUNT and
+  // BYMONTH + BYDAY=nWD (e.g. BYMONTH=11;BYDAY=2FR = 2nd Friday of November, -1FR = last).
+  // Without BYDAY the event repeats on the same day and month. Other rules are shown once.
+  const WD_CODES = ['SU','MO','TU','WE','TH','FR','SA'];
+  function nthWeekday(year, month, n, wd){
+    if(n > 0){
+      const first = new Date(year, month, 1);
+      return new Date(year, month, 1 + (wd - first.getDay() + 7) % 7 + (n-1)*7);
+    }
+    const last = new Date(year, month+1, 0);
+    return new Date(year, month, last.getDate() - (last.getDay() - wd + 7) % 7 + (n+1)*7);
+  }
+  function expandYearly(ev){
+    if(!ev.rrule) return [ev];
+    const rule = {};
+    ev.rrule.split(';').forEach(kv=>{ const [k,v]=kv.split('='); rule[k.toUpperCase()] = v; });
+    if(rule.FREQ !== 'YEARLY') return [ev];
+    const until = rule.UNTIL ? parseDateValue(rule.UNTIL,{}).date : new Date(ev.start.getFullYear()+10, 11, 31);
+    const count = rule.COUNT ? +rule.COUNT : Infinity;
+    const days = Math.round((startOfDay(ev.end) - startOfDay(ev.start)) / 86400000);
+    const ms = ev.end - ev.start;
+    const byDay = rule.BYDAY && rule.BYDAY.match(/^([+-]?\d)([A-Z]{2})$/);
+    const month = rule.BYMONTH ? +rule.BYMONTH - 1 : ev.start.getMonth();
+    const out = [];
+    for(let y = ev.start.getFullYear(); out.length < count; y++){
+      let d = byDay ? nthWeekday(y, month, +byDay[1], WD_CODES.indexOf(byDay[2]))
+                    : new Date(y, month, ev.start.getDate());
+      d.setHours(ev.start.getHours(), ev.start.getMinutes(), ev.start.getSeconds());
+      if(d > until) break;
+      if(d < ev.start) continue;
+      out.push(Object.assign({}, ev, {
+        uid: (ev.uid || ev.summary) + '#' + y,
+        start: d,
+        end: ev.allDay ? addDays(d, days) : new Date(d.getTime() + ms),
+        recurring: true
+      }));
+    }
+    return out;
+  }
+
   function parseICS(text, sourceName){
     const lines = unfoldICS(text);
     const events = [];
@@ -605,7 +645,7 @@
       if(line === 'END:VEVENT'){
         if(cur){
           if(!cur.end) cur.end = cur.allDay ? addDays(cur.start,1) : cur.start;
-          events.push(cur);
+          events.push(...expandYearly(cur));
         }
         cur = null; continue;
       }
@@ -629,6 +669,7 @@
         case 'STATUS': cur.status = value.trim().toUpperCase(); break;
         case 'DTSTART': { const r=parseDateValue(value,params); cur.start=r.date; cur.allDay=r.allDay; break; }
         case 'DTEND': { const r=parseDateValue(value,params); cur.end=r.date; if(r.allDay) cur.allDay=true; break; }
+        case 'RRULE': cur.rrule = value.trim(); break;
       }
     }
     return events;
@@ -1003,6 +1044,7 @@
       '</div>'+
       '<h3 class="'+(isTentative?'tentative-mark':'')+'">'+(ev.summary||'(sin título)')+'</h3>'+
       '<div class="meta-row">📅 '+dateLine+'</div>'+
+      (ev.recurring ? '<div class="meta-row">🔁 Se repite cada año (fecha estimada por patrón)</div>' : '')+
       (ev.location ? '<div class="meta-row">📍 '+ev.location+'</div>' : '')+
       (ev.description ? '<div class="desc">'+ev.description+'</div>' : '')+
       '<div class="actions"></div>'+

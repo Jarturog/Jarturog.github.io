@@ -180,14 +180,15 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ethdatathon2027_apply@arturo-phd-calendar
+UID:ethdatathon_apply_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270219
 DTEND;VALUE=DATE:20270220
-SUMMARY:DEADLINE ETH Zurich Datathon 2027: solicitud (ESTIMADO)
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE ETH Zurich Datathon: solicitud (ESTIMADO)
 LOCATION:Online
-DESCRIPTION:En 2026 la solicitud abrio el 05/01 y cerro el 20/02. Estimado 
- 2027: abre ~04/01/2027\, cierra ~19/02/2027. Admite doctorandos.
+DESCRIPTION:En 2026 la solicitud abrio el 05/01 y cerro el 20/02. Admite do
+ ctorandos.
 CATEGORIES:Hackathon,Datathon,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -222,15 +223,16 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:hackupc2027_apply@arturo-phd-calendar
+UID:hackupc_apply_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270326
 DTEND;VALUE=DATE:20270327
-SUMMARY:DEADLINE HackUPC 2027: solicitud (ESTIMADO)
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE HackUPC: solicitud (ESTIMADO)
 LOCATION:Online
-DESCRIPTION:Plazo no publicado. Fecha puesta ~4 semanas antes del evento po
- r precaucion\; vigilar hackupc.com desde enero. Los recibos de viaje (reem
- bolso del 50%) se entregan antes del evento. https://hackupc.com
+DESCRIPTION:Plazo no publicado\; fecha puesta ~4 semanas antes del evento p
+ or precaucion. Los recibos de viaje (reembolso del 50%) se entregan antes 
+ del evento. https://hackupc.com
 CATEGORIES:Hackathon,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -249,61 +251,80 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:tumai2027_apply@arturo-phd-calendar
+UID:tumai_apply_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270409
 DTEND;VALUE=DATE:20270410
-SUMMARY:DEADLINE TUM.ai Makeathon 2027: solicitud (ESTIMADO)
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE TUM.ai Makeathon: solicitud (ESTIMADO)
 LOCATION:Online
-DESCRIPTION:En 2026 la solicitud abrio el 07/03 y cerro el 10/04\, con revi
- sion por orden de llegada (mejor solicitar pronto). Estimado 2027: ~06/03/
- 2027 a ~09/04/2027. https://makeathon.tum-ai.com
+DESCRIPTION:En 2026 la solicitud abrio el 07/03 y cerro el 10/04\, revision
+  por orden de llegada (mejor solicitar pronto). https://makeathon.tum-ai.c
+ om
 CATEGORIES:Hackathon,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:ethdatathon2027@arturo-phd-calendar
+UID:ethdatathon_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270416
 DTEND;VALUE=DATE:20270419
-SUMMARY:ETH Zurich Datathon 2027 (TENTATIVO)
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=3FR;UNTIL=20301231
+SUMMARY:ETH Zurich Datathon (TENTATIVO)
 LOCATION:ETH Zurich\, Suiza
-DESCRIPTION:DEADLINES: solicitud estimada ~04/01/2027 a ~19/02/2027.\nEl ma
- yor hackathon de ML de Suiza (Analytics Club at ETH)\, para BSc\, MSc y do
- ctorandos. Fecha estimada: la edicion 2026 fue 17/04/2026 a 19/04/2026.
+DESCRIPTION:DEADLINES: solicitud ~04/01 a ~19/02 (estimado).\nEl mayor hack
+ athon de ML de Suiza (Analytics Club at ETH)\, para BSc\, MSc y doctorando
+ s. Fecha estimada por el patron anual\; confirmar en la web cada ano.
 CATEGORIES:Hackathon,Datathon,Europe
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:tumai_makeathon2027@arturo-phd-calendar
+UID:tumai_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270416
 DTEND;VALUE=DATE:20270419
-SUMMARY:TUM.ai Makeathon 2027 (TENTATIVO)
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=3FR;UNTIL=20301231
+SUMMARY:TUM.ai Makeathon (TENTATIVO)
 LOCATION:TUM\, Munich\, Alemania
-DESCRIPTION:DEADLINES: solicitud estimada ~06/03/2027 a ~09/04/2027\, revis
- ion por orden de llegada.\nMakeathon de 3 dias de IA aplicada con retos de
-  empresas\, abierto a estudiantes y recien graduados de todo el mundo. Fec
- ha estimada: la edicion 2026 empezo el 17/04/2026. https://makeathon.tum-a
- i.com
+DESCRIPTION:DEADLINES: solicitud ~06/03 a ~09/04 (estimado)\, revision por 
+ orden de llegada.\nMakeathon de 3 dias de IA aplicada con retos de empresa
+ s\, abierto a estudiantes y recien graduados. Fecha estimada por el patron
+  anual\; confirmar en la web cada ano. https://makeathon.tum-ai.com
 CATEGORIES:Hackathon,Europe
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:hackupc2027@arturo-phd-calendar
+UID:cassini_spring_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270423
 DTEND;VALUE=DATE:20270426
-SUMMARY:HackUPC 2027 (TENTATIVO)
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=4FR;UNTIL=20301231
+SUMMARY:CASSINI Hackathon (TENTATIVO)
+LOCATION:Varias sedes en Europa
+DESCRIPTION:DEADLINES: registro hasta ~1 semana antes del evento (en 11/202
+ 6 fue el 20/11).\nHackathon de la UE con datos de Copernicus\, Galileo\, E
+ GNOS e IRIS2\; dos ediciones al ano (primavera y otono)\, tema distinto ca
+ da vez. Fecha estimada por el patron anual\; confirmar en la web cada ano.
+  https://www.cassini.eu/hackathons/
+CATEGORIES:Hackathon,Space,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:hackupc_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270423
+DTEND;VALUE=DATE:20270426
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=4FR;UNTIL=20301231
+SUMMARY:HackUPC (TENTATIVO)
 LOCATION:UPC Campus Nord\, Barcelona
-DESCRIPTION:DEADLINES: solicitud sin fecha publicada (estimado finales de m
- arzo 2027). Recibos de viaje antes del evento.\nMayor hackathon estudianti
- l de Espana (36 h). Reembolsa el 50% del viaje (max 120 EUR desde Europa).
-  Fecha estimada: la edicion 2026 fue 24/04/2026 a 26/04/2026. https://hack
- upc.com
+DESCRIPTION:DEADLINES: solicitud ~26/03 (estimado)\; recibos de viaje antes
+  del evento.\nMayor hackathon estudiantil de Espana (36 h). Reembolsa el 5
+ 0% del viaje (max 120 EUR desde Europa). Fecha estimada por el patron anua
+ l\; confirmar en la web cada ano. https://hackupc.com
 CATEGORIES:Hackathon,Europe
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
@@ -370,45 +391,247 @@ STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:junction2027_travel@arturo-phd-calendar
+UID:junction_travel_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20270906
 DTEND;VALUE=DATE:20270907
-SUMMARY:DEADLINE Junction 2027: becas de viaje (ESTIMADO)
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE Junction: becas de viaje (ESTIMADO)
 LOCATION:Online
 DESCRIPTION:En 2026 las becas de viaje (100 EUR y 300 EUR) se pedian hasta 
- el 06/09. Estimado igual para 2027. https://www.hackjunction.com
-CATEGORIES:Hackathon,Deadline
-STATUS:TENTATIVE
-TRANSP:TRANSPARENT
-END:VEVENT
-BEGIN:VEVENT
-UID:junction2027_apply@arturo-phd-calendar
-DTSTAMP:20261029T120000Z
-DTSTART;VALUE=DATE:20271025
-DTEND;VALUE=DATE:20271026
-SUMMARY:DEADLINE Junction 2027: solicitud (ESTIMADO)
-LOCATION:Online
-DESCRIPTION:En 2026 la solicitud cerro el 25/10\, unas 3 semanas antes del 
- evento. Estimado igual para 2027\; vigilar hackjunction.com desde el veran
+ el 06/09. Fecha estimada por el patron anual\; confirmar en la web cada an
  o. https://www.hackjunction.com
 CATEGORIES:Hackathon,Deadline
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
-UID:junction2027@arturo-phd-calendar
+UID:junction_apply_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271025
+DTEND;VALUE=DATE:20271026
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE Junction: solicitud (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 la solicitud cerro el 25/10\, unas 3 semanas antes del 
+ evento. Fecha estimada por el patron anual\; confirmar en la web cada ano.
+  https://www.hackjunction.com
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:hackatum_apply_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271031
+DTEND;VALUE=DATE:20271101
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE hackaTUM: solicitud (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:El plazo no se publica: la solicitud abre en octubre y las resp
+ uestas llegan a mediados de noviembre. Solicitar en cuanto abra. https://h
+ ack.tum.de
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:junction_y@arturo-phd-calendar
 DTSTAMP:20261029T120000Z
 DTSTART;VALUE=DATE:20271112
 DTEND;VALUE=DATE:20271115
-SUMMARY:Junction 2027 (TENTATIVO)
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=2FR;UNTIL=20301231
+SUMMARY:Junction (TENTATIVO)
 LOCATION:Espoo (Helsinki)\, Finlandia
-DESCRIPTION:DEADLINES: becas de viaje ~06/09/2027\, solicitud ~25/10/2027 (
- estimados a partir de 2026).\nEl hackathon mas grande de Europa\, cada nov
- iembre desde 2015: ~2000 participantes\, 48 h\, unos 100.000 EUR en premio
- s en 2026 (retos de empresas). Fecha estimada: la edicion 2026 fue 13/11/2
- 026 a 15/11/2026. https://www.hackjunction.com
+DESCRIPTION:DEADLINES: becas de viaje ~06/09\, solicitud ~25/10.\nEl hackat
+ hon mas grande de Europa\, cada noviembre desde 2015: ~2000 participantes\
+ , 48 h\, unos 100.000 EUR en premios en 2026. Fecha estimada por el patron
+  anual\; confirmar en la web cada ano. https://www.hackjunction.com
 CATEGORIES:Hackathon,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:hackatum_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271126
+DTEND;VALUE=DATE:20271129
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=4FR;UNTIL=20301231
+SUMMARY:hackaTUM (TENTATIVO)
+LOCATION:TUM Campus Garching\, Munich\, Alemania
+DESCRIPTION:DEADLINES: solicitud abre en octubre\, cerrar antes de ~31/10 (
+ no publicado).\nHackathon oficial de Informatica de la TUM\, de los mas gr
+ andes de la UE (36 h\, retos de empresas). Abierto a todo el mundo\, grati
+ s. Fecha estimada por el patron anual\; confirmar en la web cada ano. http
+ s://hack.tum.de
+CATEGORIES:Hackathon,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cassini_autumn_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271126
+DTEND;VALUE=DATE:20271129
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=4FR;UNTIL=20301231
+SUMMARY:CASSINI Hackathon (TENTATIVO)
+LOCATION:Varias sedes en Europa
+DESCRIPTION:DEADLINES: registro hasta ~1 semana antes del evento (en 11/202
+ 6 fue el 20/11).\nHackathon de la UE con datos de Copernicus\, Galileo\, E
+ GNOS e IRIS2\; dos ediciones al ano (primavera y otono)\, tema distinto ca
+ da vez. Fecha estimada por el patron anual\; confirmar en la web cada ano.
+  https://www.cassini.eu/hackathons/
+CATEGORIES:Hackathon,Space,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:treehacks_apply_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271201
+DTEND;VALUE=DATE:20271202
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE TreeHacks: solicitud (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:Plazo no publicado\; fecha puesta a principios de diciembre por
+  precaucion. https://treehacks.com
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:raise_apply_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271207
+DTEND;VALUE=DATE:20271208
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE RAISE Hackathon: solicitud prioritaria (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:Para 2026 hubo plazo prioritario el 08/12/2025. https://www.rai
+ sesummit.com/hackathon
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:cvpr_challenges_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280110
+DTEND;VALUE=DATE:20280111
+RRULE:FREQ=YEARLY;BYMONTH=1;BYDAY=2MO;UNTIL=20301231
+SUMMARY:Revisar challenges de workshops CVPR
+LOCATION:Online
+DESCRIPTION:DEADLINES: cada challenge tiene los suyos\, normalmente marzo a
+  mayo. Los workshops se notifican a finales de diciembre.
+CATEGORIES:Competition
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:treehacks_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280211
+DTEND;VALUE=DATE:20280214
+RRULE:FREQ=YEARLY;BYMONTH=2;BYDAY=2FR;UNTIL=20301231
+SUMMARY:TreeHacks (TENTATIVO)
+LOCATION:Stanford University\, California\, EEUU
+DESCRIPTION:DEADLINES: solicitud ~01/12 del ano anterior (estimado).\nUno d
+ e los hackathons mas fuertes del mundo (~500.000 USD en premios en 2026). 
+ Abierto a doctorandos de cualquier pais\, gratis y cubre vuelos (con limit
+ e por region). Fecha estimada por el patron anual\; confirmar en la web ca
+ da ano. https://treehacks.com
+CATEGORIES:Hackathon,USA
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:starthack_apply_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280305
+DTEND;VALUE=DATE:20280306
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE START Hack: solicitud (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2024 cerro el 06/03 para un evento a mediados de marzo. http
+ s://www.startglobal.org/start-hack
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:starthack_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280315
+DTEND;VALUE=DATE:20280318
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=3WE;UNTIL=20301231
+SUMMARY:START Hack (TENTATIVO)
+LOCATION:St. Gallen\, Suiza
+DESCRIPTION:DEADLINES: solicitud ~05/03 (estimado).\nHackathon de estudiant
+ es\, 600 participantes\, 36 h\, retos de empresas\, 10.000 CHF en premios.
+  Junto al START Summit. Fecha estimada por el patron anual\; confirmar en 
+ la web cada ano. https://www.startglobal.org/start-hack
+CATEGORIES:Hackathon,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:defcon_book_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280503
+DTEND;VALUE=DATE:20280504
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:DEADLINE DEF CON: reservar vuelo y hotel
+LOCATION:Online
+DESCRIPTION:Sin solicitud: se compra la entrada. Las competiciones del AI V
+ illage se anuncian en junio o julio. https://aivillage.org
+CATEGORIES:Competition,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:raise_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280702
+DTEND;VALUE=DATE:20280704
+RRULE:FREQ=YEARLY;BYMONTH=7;BYDAY=1SU;UNTIL=20301231
+SUMMARY:RAISE Hackathon (TENTATIVO)
+LOCATION:Paris
+DESCRIPTION:DEADLINES: solicitud prioritaria ~07/12 del ano anterior (estim
+ ado).\nHackathon de IA de 24 h con 1000+ participantes antes de la RAISE S
+ ummit. 200.000 EUR en premios en 2026. Puede requerir entrada de la summit
+ . Fecha estimada por el patron anual\; confirmar en la web cada ano. https
+ ://www.raisesummit.com/hackathon
+CATEGORIES:Hackathon,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:neurips_comps_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280724
+DTEND;VALUE=DATE:20280725
+RRULE:FREQ=YEARLY;BYMONTH=7;BYDAY=4MO;UNTIL=20301231
+SUMMARY:Revisar competiciones NeurIPS
+LOCATION:Online
+DESCRIPTION:DEADLINES: cada competicion tiene los suyos\, normalmente octub
+ re a noviembre\; resultados en diciembre. La lista sale a finales de julio.
+CATEGORIES:Competition
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:defcon_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20280803
+DTEND;VALUE=DATE:20280807
+RRULE:FREQ=YEARLY;BYMONTH=8;BYDAY=1TH;UNTIL=20301231
+SUMMARY:DEF CON (AI Village / AI CTF) (TENTATIVO)
+LOCATION:Las Vegas\, EEUU
+DESCRIPTION:DEADLINES: sin solicitud\; reservar viaje ~03/05.\nLa mayor con
+ ferencia de hacking\; el AI Village suele tener CTF de IA y red-teaming de
+  LLMs. Solo si sigues en seguridad de ML. Fecha estimada por el patron anu
+ al\; confirmar en la web cada ano. https://aivillage.org
+CATEGORIES:Competition,Security,USA
 STATUS:TENTATIVE
 TRANSP:TRANSPARENT
 END:VEVENT
