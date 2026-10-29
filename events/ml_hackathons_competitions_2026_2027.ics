@@ -369,4 +369,47 @@ CATEGORIES:Competition,Security,USA
 STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
+BEGIN:VEVENT
+UID:junction2027_travel@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270906
+DTEND;VALUE=DATE:20270907
+SUMMARY:DEADLINE Junction 2027: becas de viaje (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 las becas de viaje (100 EUR y 300 EUR) se pedian hasta 
+ el 06/09. Estimado igual para 2027. https://www.hackjunction.com
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:junction2027_apply@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271025
+DTEND;VALUE=DATE:20271026
+SUMMARY:DEADLINE Junction 2027: solicitud (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:En 2026 la solicitud cerro el 25/10\, unas 3 semanas antes del 
+ evento. Estimado igual para 2027\; vigilar hackjunction.com desde el veran
+ o. https://www.hackjunction.com
+CATEGORIES:Hackathon,Deadline
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:junction2027@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20271112
+DTEND;VALUE=DATE:20271115
+SUMMARY:Junction 2027 (TENTATIVO)
+LOCATION:Espoo (Helsinki)\, Finlandia
+DESCRIPTION:DEADLINES: becas de viaje ~06/09/2027\, solicitud ~25/10/2027 (
+ estimados a partir de 2026).\nEl hackathon mas grande de Europa\, cada nov
+ iembre desde 2015: ~2000 participantes\, 48 h\, unos 100.000 EUR en premio
+ s en 2026 (retos de empresas). Fecha estimada: la edicion 2026 fue 13/11/2
+ 026 a 15/11/2026. https://www.hackjunction.com
+CATEGORIES:Hackathon,Europe
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
 END:VCALENDAR
