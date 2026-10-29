@@ -231,18 +231,29 @@ TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT
 UID:ijcai2027@arturo-phd-calendar
-DTSTAMP:20260801T120000Z
-DTSTART;VALUE=DATE:20270814
-DTEND;VALUE=DATE:20270821
-SUMMARY:IJCAI 2027 (TENTATIVO)
-LOCATION:Sede por confirmar
-DESCRIPTION:ACTUALIZADO 01-ago-2026: IJCAI oficial (ijcai.org) confirma qu
- e sede y fechas de IJCAI-2027 se anunciaran durante IJCAI-ECAI-26 (Bremen
- \, 15-21 ago 2026). Varios trackers estiman Aug 14-20\, 2027 (TBA) en bas
- e al patron historico; sin confirmar oficialmente. Fecha ajustada respect
- o a la estimacion previa.
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270807
+DTEND;VALUE=DATE:20270814
+SUMMARY:IJCAI 2027 (sede 1: Kioto)
+LOCATION:Kioto\, Japon
+DESCRIPTION:VERIFICADO 29/10/2026 en ijcai.org: IJCAI-27 tiene dos sedes: K
+ ioto (Japon) del 07/08/2027 al 13/08/2027 y Hengqin (China) del 15/08/2027
+  al 17/08/2027. Justo antes de ACL 2027 en Kioto (17/08/2027).
 CATEGORIES:AI,Conference
-STATUS:TENTATIVE
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:ijcai2027_hengqin@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270815
+DTEND;VALUE=DATE:20270818
+SUMMARY:IJCAI 2027 (sede 2: Hengqin)
+LOCATION:Hengqin\, China
+DESCRIPTION:VERIFICADO 29/10/2026 en ijcai.org: segunda sede de IJCAI-27 de
+ l 15/08/2027 al 17/08/2027 (la primera es Kioto\, 07/08/2027 a 13/08/2027).
+CATEGORIES:AI,Conference
+STATUS:CONFIRMED
 TRANSP:TRANSPARENT
 END:VEVENT
 BEGIN:VEVENT

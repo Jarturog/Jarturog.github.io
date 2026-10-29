@@ -1,0 +1,55 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Arturo PhD Calendar//ES
+CALSCALE:GREGORIAN
+X-WR-CALNAME:Arturo - China
+X-WR-TIMEZONE:Europe/Madrid
+BEGIN:VEVENT
+UID:asiaccs27_c2@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20261211
+DTEND;VALUE=DATE:20261212
+SUMMARY:DEADLINE AsiaCCS 2027: papers ciclo 2
+LOCATION:Online
+DESCRIPTION:Ultimo ciclo de envio para ACM AsiaCCS 2027 (Macao\, 12/07/2027
+  a 16/07/2027). Notificacion 31/03/2027\, camera-ready 07/05/2027. El cicl
+ o 1 cerro el 21/08/2026. https://asiaccs2027.cityu.edu.mo/
+CATEGORIES:Security,Conference,Deadline
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:csc_scholar_y@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270115
+DTEND;VALUE=DATE:20270116
+RRULE:FREQ=YEARLY;UNTIL=20301231
+SUMMARY:Revisar Chinese Government Scholarship (General Scholar) (ESTIMADO)
+LOCATION:Online
+DESCRIPTION:Beca del gobierno chino para estancias de investigacion de 3 a 
+ 12 meses en una universidad china (General Scholar\, menores de 45). Los p
+ lazos van de diciembre a abril segun la via: embajada china en Alemania\, 
+ programa UE de la mision china ante la UE\, o universidades espanolas (en 
+ 2026 la de la UPC cerro el 30/12/2025). Hace falta carta de aceptacion de 
+ un profesor chino. Mismo problema que JSPS: comprobar si es compatible con
+  el contrato MSCA. https://www.campuschina.org
+CATEGORIES:China,Fellowship
+STATUS:TENTATIVE
+TRANSP:TRANSPARENT
+END:VEVENT
+BEGIN:VEVENT
+UID:asiaccs27@arturo-phd-calendar
+DTSTAMP:20261029T120000Z
+DTSTART;VALUE=DATE:20270712
+DTEND;VALUE=DATE:20270717
+SUMMARY:ACM AsiaCCS 2027
+LOCATION:Wynn Palace\, Macao\, China
+DESCRIPTION:DEADLINES: papers ciclo 2 hasta 11/12/2026 (notificacion 31/03/
+ 2027\, camera-ready 07/05/2027)\; ciclo 1 ya cerrado (21/08/2026).\nConfer
+ encia de seguridad de ACM en Asia\; publica bastante seguridad de ML (back
+ doors\, adversarial\, privacidad). https://asiaccs2027.cityu.edu.mo/
+CATEGORIES:Security,Conference
+STATUS:CONFIRMED
+TRANSP:TRANSPARENT
+END:VEVENT
+END:VCALENDAR
